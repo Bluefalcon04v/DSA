@@ -10,4 +10,4 @@ function sumOfNaturalNumbers(num) {
   }
   return sum;
 }
-console.log(sumOfNaturalNumbers(5));
+// console.log(sumOfNaturalNumbers(5));
