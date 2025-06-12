@@ -18,9 +18,9 @@ function iterativeFibonacci(num) {
   return fib[num];
 }
 
-console.log(iterativeFibonacci(0));
-console.log(iterativeFibonacci(1));
-console.log(iterativeFibonacci(6));
+// console.log(iterativeFibonacci(0));
+// console.log(iterativeFibonacci(1));
+// console.log(iterativeFibonacci(6));
 
 function recursiveFibonacci(n) {
   if (n < 2) return n;
@@ -28,6 +28,6 @@ function recursiveFibonacci(n) {
 }
 
 
-console.log(recursiveFibonacci(0));
-console.log(recursiveFibonacci(1));
-console.log(recursiveFibonacci(6));
+// console.log(recursiveFibonacci(0));
+// console.log(recursiveFibonacci(1));
+// console.log(recursiveFibonacci(6));
