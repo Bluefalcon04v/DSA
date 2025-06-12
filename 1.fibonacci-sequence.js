@@ -19,4 +19,4 @@ function fibonacci(num) {
   return fib;
 }
 
-console.log(fibonacci(4));
+// console.log(fibonacci(4));
