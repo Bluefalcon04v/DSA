@@ -16,11 +16,13 @@ function isPrime(num) {
   return true;
 }
 
-console.log(isPrime(1)); // false
-console.log(isPrime(2)); // true
-console.log(isPrime(3)); // true
-console.log(isPrime(4)); // false
-console.log(isPrime(5)); // true
-console.log(isPrime(6)); // false
-console.log(isPrime(7)); // true
-console.log(isPrime(8)); // false
+// console.log(isPrime(1)); // false
+// console.log(isPrime(2)); // true
+// console.log(isPrime(3)); // true
+// console.log(isPrime(4)); // false
+// console.log(isPrime(5)); // true
+// console.log(isPrime(6)); // false
+// console.log(isPrime(7)); // true
+// console.log(isPrime(8)); // false
+
+// Big-O  is O(n)
