@@ -1,4 +1,4 @@
-/*
+/* FIBONACCI SEQUENCE
 Problem - Give a number 'n' find the first 'n' elements of the fibonacci sequence 
 
 fibonacci(2) => [0, 1]
