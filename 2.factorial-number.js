@@ -15,6 +15,17 @@ function factorial(num) {
   return total;
 }
 
+function factorial2(num) {
+  if (num < 1) return 1;
+
+  let fact = 1;
+  while (num > 1) {
+    fact = fact * num;
+    num--;
+  }
+  return fact;
+}
+
 // console.log(factorial(0)); // 1
 // console.log(factorial(1)); // 1
 // console.log(factorial(4)); // 24

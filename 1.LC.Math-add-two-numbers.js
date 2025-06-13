@@ -31,7 +31,9 @@ function addTwoNumber() {
 
     newNumber = Math.trunc(newNumber / 10);
   }
-  console.log(newReverse);
+
+  newReverse = newReverse.toString().split('').map(Number)
+  // console.log(newReverse);
 }
 
 addTwoNumber();
