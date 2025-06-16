@@ -8,19 +8,22 @@ arr[-5,4,6,8,10], t= 20 -> should return -1
 */
 
 function binarySearch(array, target) {
-  let index = 0;
-  let forward = 0;
-  let last = array.length;
-
-  console.log(array.length)
-
-//   for(let i= 0; i< )
-//   if (array[index] === target) return index;
-//   else if (array[index] < target) return (forward = index);
-//   else if (array[index] > target) return (last = index);
-//   else return -1;
+  firstIndex = 0;
+  lastIndex = array.length - 1;
+  while (firstIndex <= lastIndex) {
+    let middleIndex = Math.floor((firstIndex + lastIndex) / 2);
+    if (array[middleIndex] === target) return middleIndex;
+    else if (array[middleIndex] < target) {
+      firstIndex = middleIndex + 1;
+    } else {
+      lastIndex = middleIndex - 1;
+    }
+  }
+  return -1;
 }
 
-console.log(binarySearch([-5, 4, 6, 8, 10], 4));
-// console.log(binarySearch([-5, 4, 6, 8, 10], 6));
+// console.log(binarySearch([-5, 4, 6, 8, 10], 10));
+// console.log(binarySearch([-5, 4, 6, 8, 10], -5));
 // console.log(binarySearch([-5, 4, 6, 8, 10], 40));
+
+// Big-O O(log(n))
