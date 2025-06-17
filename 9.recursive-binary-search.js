@@ -21,4 +21,6 @@ function search(array, target, firstIndex, lastIndex) {
     return search(array, target, 0, middleIndex - 1);
 }
 
-console.log(recursiveBinarySearch([-5, 4, 6, 8, 10], 0));
+// console.log(recursiveBinarySearch([-5, 4, 6, 8, 10], 0));
+
+// Big-O = O(logn)
