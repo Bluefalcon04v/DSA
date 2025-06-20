@@ -2,8 +2,8 @@
 
 - ✅ Print numbers from 1 to N
 - ✅ Print numbers from N to 1
-- Print all even numbers from 1 to N
-- Print all odd numbers from N to 1
+- ✅ Print all even numbers from 1 to N
+- ✅ Print all odd numbers from N to 1
 - Print each digit of a number (e.g., 123 → 1, 2, 3)
 
 🔄 Return Values (Sum, Product, etc.)
