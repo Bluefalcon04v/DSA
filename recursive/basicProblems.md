@@ -4,12 +4,12 @@
 - ✅ Print numbers from N to 1
 - ✅ Print all even numbers from 1 to N
 - ✅ Print all odd numbers from N to 1
-- Print each digit of a number (e.g., 123 → 1, 2, 3)
+- ✅ Print each digit of a number (e.g., 123 → 1, 2, 3)
 
 🔄 Return Values (Sum, Product, etc.)
 
-- Return the sum of numbers from 1 to N
-- Return the factorial of N
+- ✅ Return the sum of numbers from 1 to N
+- ✅ Return the factorial of N
 - Return the N-th Fibonacci number
 - Count how many times a digit (e.g., 7) appears in a number
 - Return the sum of digits of a number
