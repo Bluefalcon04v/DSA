@@ -44,7 +44,6 @@ function cartesianProduct(num) {
 
 function joiningArray(firstElem, rest) {
   if (rest.length === 0) return firstElem;
-  console.log(rest);
   const next = joiningArray(rest[0], rest.slice(1));
 
   let result = [];
@@ -56,11 +55,6 @@ function joiningArray(firstElem, rest) {
   }
 
   return result;
-
-//   const [FirstIndex, ...restIndex] = firstElem;
-//   let newArr = rest.map((i) => [FirstIndex, i]);
-
-//   return newArr.concat(joiningArray(restIndex, rest));
 }
 
-console.log(cartesianProduct("32"));
+// console.log(cartesianProduct("32"));
