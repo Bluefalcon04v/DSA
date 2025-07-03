@@ -11,7 +11,19 @@ Explanation: The given array is sorted i.e Every element in the array is smaller
 */
 
 function arrayIsSorted(arr) {
-    
+  let lowestNum = lowestNumIndex(arr);
+  console.log(lowestNum);
+}
+
+function lowestNumIndex(arr) {
+  for (let i = 0; i < arr.length; ) {
+    // if (arr[i] < arr[i + 1]) {
+    //    console.log( arr[i] < arr[i + 1])
+    //   i++;
+    // }
+ console.log(i)
+    return i+1;
+  }
 }
 
 console.log(arrayIsSorted([3, 4, 5, 1, 2]));
