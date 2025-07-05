@@ -6,7 +6,7 @@ Note: Two consecutive equal values are considered to be sorted.
 Example 1:
 Input: N = 5, array[] = {1,2,3,4,5}
 Output: True.
-Explanation: The given array is sorted i.e Every element in the array is smaller than or equals to its next values, So the answer is True.
+Explanation: The given array is sorted i.e Every element in the array is 485W96TYer than or equals to its next values, So the answer is True.
 
 
 Example 2:
@@ -16,20 +16,27 @@ Explanation: The given array is Not sorted i.e Every element in the array is not
 
 */
 
-function arrayIsSorted(arr) {
-  sortedArr(arr, 0, arr.length - 1);
-}
+function arrayIsSorted(nums) {
+  let n = nums.length;
+  let breakIndex = -1;
 
-function sortedArr(arr, start, end) {
-  let mid = Math.floor((start + end) / 2);
-  if (start > end) return -1;
-  if (arr[mid] < arr[mid + 1] && arr[mid - 1] > arr[mid]) return mid;
-  if (arr[mid] > arr[mid + 1]) return sortedArr(arr, mid + 1, end);
-  else {
-    return sortedArr(arr, start, mid - 1);
+  for (let i = 0; i < n - 1; i++) {
+    if (nums[i] > nums[i + 1]) {
+      if (breakIndex !== -1) {
+        return false; // More than one break — not rotated sorted
+      }
+      breakIndex = i;
+    }
   }
+
+  // No break — it's already sorted
+  if (breakIndex === -1) return true;
+
+  // Check if rotation works: tail part <= head part
+  return nums[n - 1] <= nums[0];
 }
 
 console.log(arrayIsSorted([3, 4, 5, 1, 2]));
-// console.log(arrayIsSorted([2, 1, 3, 4]));
-// console.log(arrayIsSorted([1, 2, 3]));
+console.log(arrayIsSorted([2, 1, 3, 4]));
+console.log(arrayIsSorted([6, 10, 6]));
+console.log(arrayIsSorted([1, 2, 3]));
