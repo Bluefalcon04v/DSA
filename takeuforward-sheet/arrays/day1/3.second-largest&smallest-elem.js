@@ -21,32 +21,57 @@ Output:
 Explanation: Since there is only one element in the array, it is the largest and smallest element present in the array. There is no second largest or second smallest element present.
 */
 
-function largestSmallestElem(arr) {
-  if (arr.length < 2) return -1;
-  let sortedArr = sortingArr(arr);
+// function largestSmallestElem(arr) {
+//   if (arr.length < 2) return [-1, -1];
 
-  let i = 0;
-  while(i < )
-}
+//   let count = 1;
+//   for (let i = 0; i <= arr.length; i++) {
+//     if (arr[i] === arr[count]) {
+//       count += 1;
+//     } else break;
+//   }
+//   if (count === arr.length) {
+//     return -1;
+//   }
 
-function sortingArr(arr) {
-  if (arr.length < 2) return arr;
-  let mid = Math.floor(arr.length / 2);
+//   let sortedArr = sortingArr(arr);
+//   let i = 0;
+//   while (sortedArr[i] === sortedArr[i + 1]) {
+//     i++;
+//   }
 
-  let leftArr = arr.slice(0, mid);
-  let rightArr = arr.slice(mid);
-  return mergingArr(sortingArr(leftArr), sortingArr(rightArr));
-}
+//   let secondSmallest = sortedArr[i + 1];
 
-function mergingArr(leftArr, rightArr) {
-  let temp = [];
-  while (leftArr.length && rightArr.length) {
-    if (leftArr[0] <= rightArr[0]) temp.push(leftArr.shift());
-    else temp.push(rightArr.shift());
-  }
+//   let j = sortedArr.length - 1;
+//   while (sortedArr[j] === sortedArr[j - 1]) {
+//     j--;
+//   }
 
-  return [...temp, ...leftArr, ...rightArr];
-}
+//   let secondLargest = sortedArr[j - 1];
+//   return [secondSmallest, secondLargest];
+// }
+
+// function sortingArr(arr) {
+//   if (arr.length < 2) return arr;
+//   let mid = Math.floor(arr.length / 2);
+
+//   let leftArr = arr.slice(0, mid);
+//   let rightArr = arr.slice(mid);
+//   return mergingArr(sortingArr(leftArr), sortingArr(rightArr));
+// }
+
+// function mergingArr(leftArr, rightArr) {
+//   let temp = [];
+//   while (leftArr.length && rightArr.length) {
+//     if (leftArr[0] <= rightArr[0]) temp.push(leftArr.shift());
+//     else temp.push(rightArr.shift());
+//   }
+
+//   return [...temp, ...leftArr, ...rightArr];
+// }
 
 // console.log(largestSmallestElem([1]));
-console.log(largestSmallestElem([1, 2, 4, 7, 7, 5]));
+// console.log(largestSmallestElem([1, 2, 4, 7, 7, 5]));
+// console.log(largestSmallestElem([3, 3, 2, 1, 4, 4]));
+// console.log(largestSmallestElem([2, 2, 2]));
+// console.log(largestSmallestElem([3, 3, 3, 2]));
