@@ -21,13 +21,19 @@ rotate 2 steps to the right: [3,99,-1,-100]
 */
 
 function rotateArray(nums, k) {
-  for (let i = 1; i <= k; i++) {
-    // let temp = nums[nums.length - i];
-    [nums[nums.length - i], nums[i]] = [nums[i], nums[nums.length - i]];
+  k = k % nums.length;
+  return reverseAnArray(nums, 0, k);
+}
+
+function reverseAnArray(nums, start, end) {
+  while (start <= end) {
+    [nums[start], nums[end]] = [nums[end], nums[start]];
+    start++;
+    end--;
   }
   return nums;
 }
 
-console.log(rotateArray([1, 2, 3, 4, 5, 6, 7], 3));
-console.log(rotateArray([-1, -100, 3, 99], 2));
-console.log(rotateArray([1, 2], 3));
+console.log(rotateArray([1, 2, 3, 4, 5], 1));
+// console.log(rotateArray([-1, -100, 3, 99], 2));
+// console.log(rotateArray([1, 2], 3));
