@@ -21,12 +21,13 @@ rotate 2 steps to the right: [3,99,-1,-100]
 */
 
 function rotateArray(nums, k) {
-  k = k % nums.length;
-  return reverseAnArray(nums, 0, k);
+  return reverseAnArray(nums, nums.length - 1 - k, nums.length - 1);
+  reverseAnArray(nums, 0, k - 1);
+  return reverseAnArray(nums, 0, nums.length - 1);
 }
 
 function reverseAnArray(nums, start, end) {
-  while (start <= end) {
+  while (start < end) {
     [nums[start], nums[end]] = [nums[end], nums[start]];
     start++;
     end--;
