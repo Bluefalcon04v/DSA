@@ -21,9 +21,10 @@ rotate 2 steps to the right: [3,99,-1,-100]
 */
 
 function rotateArray(nums, k) {
-  return reverseAnArray(nums, nums.length - 1 - k, nums.length - 1);
+  k = k % nums.length;
+  reverseAnArray(nums, 0, nums.length - 1);
   reverseAnArray(nums, 0, k - 1);
-  return reverseAnArray(nums, 0, nums.length - 1);
+  return reverseAnArray(nums, k, nums.length - 1);
 }
 
 function reverseAnArray(nums, start, end) {
@@ -35,6 +36,6 @@ function reverseAnArray(nums, start, end) {
   return nums;
 }
 
-console.log(rotateArray([1, 2, 3, 4, 5], 1));
+// console.log(rotateArray([1, 2, 3, 4, 5], 8));
 // console.log(rotateArray([-1, -100, 3, 99], 2));
 // console.log(rotateArray([1, 2], 3));
