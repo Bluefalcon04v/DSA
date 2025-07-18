@@ -20,4 +20,3 @@ function insertionSort(arr) {
 }
 
 // console.log(insertionSort([4, 6, 1, -8, 2]));
-             
