@@ -1,4 +1,4 @@
-// - DUTCH NATIONAL FLAG ALGORITHM
+// - DUTCH NATIONAL FLAG ALGORITHM 
 
 /*
 Problem Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
@@ -38,9 +38,6 @@ function sortColors(nums) {
   return nums;
 }
 
-console.log(sortColors([2, 0, 2, 1, 1, 0]));
-console.log(sortColors([2, 0, 1]));
-console.log(sortColors([1, 2, 0]));
-
-console.log(sortColors([2, 0, 2, 1, 1, 0]));
-console.log(sortColors([2, 0, 1]));
+// console.log(sortColors([2, 0, 2, 1, 1, 0]));
+// console.log(sortColors([2, 0, 1]));
+// console.log(sortColors([1, 2, 0]));
