@@ -58,7 +58,6 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 // console.log(pivotIndex([1, 2, 3]));
 // console.log(pivotIndex([2, 1, -1]));
 
-// ---------------------------------------------------------------------------------------------
 
 function pivotIndex(nums) {
   for (let i = 0; i < nums.length; i++) {
