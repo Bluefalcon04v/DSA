@@ -37,6 +37,6 @@ function maxProduct(nums) {
 
   return Math.max(maxA * maxB * maxC, minA * minB);
 }
-console.log(maxProduct( [1, 2, 3]));
-console.log(maxProduct([1, 2, -4, 3]));
-console.log(maxProduct([-1, -3, 2, -6]));
+// console.log(maxProduct( [1, 2, 3]));
+// console.log(maxProduct([1, 2, -4, 3]));
+// console.log(maxProduct([-1, -3, 2, -6]));
