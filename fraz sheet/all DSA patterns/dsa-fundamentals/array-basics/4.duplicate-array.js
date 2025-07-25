@@ -13,4 +13,4 @@ function duplicateArray(arr) {
   return duplicate;
 }
 
-console.log(duplicateArray([1, 2, 3, 4, 5]));
+// console.log(duplicateArray([1, 2, 3, 4, 5]));
