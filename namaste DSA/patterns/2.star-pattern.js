@@ -43,4 +43,4 @@ function starPattern(n) {
   }
 }
 
-starPattern(7);
+// starPattern(7);

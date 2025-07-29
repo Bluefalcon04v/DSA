@@ -28,7 +28,7 @@ function starPattern(n) {
   }
 }
 
-starPattern(12);
+// starPattern(12);
 
 
 
