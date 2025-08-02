@@ -35,5 +35,5 @@ function isPalindrome(n) {
 }
 
 // isPalindrome(121);
-isPalindrome(-121);
+// isPalindrome(-121);
 // isPalindrome(12112);

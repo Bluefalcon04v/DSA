@@ -13,4 +13,4 @@ function reverseInteger(n) {
   return copyN < 0 ? -rev : rev;
 }
 
-console.log(reverseInteger(12312));
+// console.log(reverseInteger(12312));
