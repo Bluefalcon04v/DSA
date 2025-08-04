@@ -26,4 +26,4 @@ function removeDuplicate(nums) {
   return x+1;
 }
 
-console.log(removeDuplicate([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+// console.log(removeDuplicate([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
