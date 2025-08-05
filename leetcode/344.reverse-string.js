@@ -17,14 +17,11 @@ Input: s = ["H","a","n","n","a","h"]
 Output: ["h","a","n","n","a","H"]
 */
 
-function reverseString(s) {
-  let temp;
-  for (let i = 1; i <= Math.floor(s.length / 2); i++) {
-    temp = s[i - 1];
-    s[i - 1] = s[s.length - i];
-    s[s.length - i] = temp;
+function reverseString(nums) {
+  for (let i = 0; i < Math.floor(nums.length/2); i++) {
+    [nums[i], nums[nums.length - 1 - i]] = [ nums[nums.length - 1 - i], nums[i]]
   }
-  return s;
+  return nums;
 }
 
 function reverseString(s) {
