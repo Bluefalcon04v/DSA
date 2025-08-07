@@ -33,5 +33,5 @@ function isBestTime(prices) {
   return profit;
 }
 
-console.log(isBestTime([7, 1, 5, 3, 6, 4]));
-console.log(isBestTime([7, 6, 4, 3, 1]));
+// console.log(isBestTime([7, 1, 5, 3, 6, 4]));
+// console.log(isBestTime([7, 6, 4, 3, 1]));
