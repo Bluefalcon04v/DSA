@@ -20,7 +20,7 @@ Output: 1
 
 //? Method 1 Using Hash Table
 //? Time Complexity O(n)
-//? Space Complexity O(n/2s)
+//? Space Complexity O(n/2)
 // function isSingleNumber(nums) {
 //   let hash = {};
 //   for (let i = 0; i < nums.length; i++) {
