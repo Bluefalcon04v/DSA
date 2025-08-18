@@ -18,8 +18,8 @@ Output: ["h","a","n","n","a","H"]
 */
 
 function reverseString(nums) {
-  for (let i = 0; i < Math.floor(nums.length/2); i++) {
-    [nums[i], nums[nums.length - 1 - i]] = [ nums[nums.length - 1 - i], nums[i]]
+  for (let i = 0; i < Math.floor(nums.length / 2); i++) {
+    [nums[i], nums[nums.length - 1 - i]] = [nums[nums.length - 1 - i], nums[i]];
   }
   return nums;
 }
