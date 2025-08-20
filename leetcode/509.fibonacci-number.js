@@ -7,7 +7,6 @@ F(0) = 0, F(1) = 1
 F(n) = F(n - 1) + F(n - 2), for n > 1.
 Given n, calculate F(n).
 
-
 Example 1:
 Input: n = 2
 Output: 1
@@ -24,3 +23,10 @@ Output: 3
 Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
 */
+
+function fib(n) {
+  if (n <= 1) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+
+// console.log(fib(4));
