@@ -22,26 +22,22 @@ function print_n_to_1(n) {
 // ---------------------------------------------------------------------------------------------------------- Print all even numbers from 1 to N
 
 function evenNumber_1_to_n(n) {
-  if (n < 2) return [];
-  if (n % 2 !== 0) return evenNumber_1_to_n(n - 1);
-  let result = evenNumber_1_to_n(n - 1);
-  result.push(n);
-  return result;
+  if (n <= 1) return;
+  evenNumber_1_to_n(n - 1);
+  if (n % 2 == 0) console.log(n);
 }
 
-// console.log(evenNumber_1_to_n(10));
+// evenNumber_1_to_n(10);
 
 // ---------------------------------------------------------------------------------------------------------- Print all even numbers from N to 1
 
 function evenNumber_n_to_1(n) {
-  if (n < 2) return [];
-  if (n % 2 !== 0) return evenNumber_n_to_1(n - 1);
-  let result = evenNumber_n_to_1(n - 1);
-  result.unshift(n);
-  return result;
+  if (n <= 1) return;
+  if (n % 2 == 0) console.log(n);
+  evenNumber_n_to_1(n - 1);
 }
 
-// console.log(evenNumber_n_to_1(20));
+// evenNumber_n_to_1(20);
 
 // ---------------------------------------------------------------------------------------------------------- Print each digit of a number (e.g., 123 → 1, 2, 3)
 
@@ -88,3 +84,14 @@ function printFactorial(n) {
 }
 
 // console.log(printFactorial(10));
+
+// ----------------------------------------------------------------------------------------  Count how many times a digit (e.g., 7) appears in a number
+
+function sevenAppears(n) {
+  if (n < 1) return 0;
+  let lastDigit = n % 10;
+  let counter = lastDigit == 7 ? 1 : 0;
+  return counter + sevenAppears(Math.floor(n / 10));
+}
+
+// console.log(sevenAppears(177271));
