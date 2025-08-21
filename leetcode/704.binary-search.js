@@ -33,4 +33,4 @@ function binSearch(arr, target) {
   return -1;
 }
 
-console.log(binSearch([-1, 0, 3, 5, 9, 12], 0));
+// console.log(binSearch([-1, 0, 3, 5, 9, 12], 0));
