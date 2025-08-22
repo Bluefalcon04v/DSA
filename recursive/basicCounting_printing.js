@@ -39,7 +39,7 @@ function evenNumber_n_to_1(n) {
 
 // evenNumber_n_to_1(20);
 
-// ---------------------------------------------------------------------------------------------------------- Print each digit of a number (e.g., 123 → 1, 2, 3)
+// -------------------------------------------------------------------------------------- Print each digit of a number (e.g., 123 → 1, 2, 3)
 
 function eachDigitOfNumber(n) {
   if (n < 10) return [n];
@@ -49,6 +49,15 @@ function eachDigitOfNumber(n) {
 }
 
 // console.log(eachDigitOfNumber(1258));
+
+// -------------------------------------------------------------------------------------- The sum of digits of a number (e.g. 1001 => 1+0+0+1 => 2)
+function sumOfDigit(n) {
+  if (n < 10) return n;
+  let sum = n % 10;
+  return sum + sumOfDigit(Math.floor(n / 10));
+}
+
+// console.log(sumOfDigit(1011));
 
 // ----------------------------------------------------------------------------------------------------------Self Dividing Numbers
 // Input: left = 1, right = 22

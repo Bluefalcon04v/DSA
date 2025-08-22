@@ -11,8 +11,8 @@
 - ✅ Return the sum of numbers from 1 to N ✅
 - ✅ Return the factorial of N ✅
 - ✅ Return the N-th Fibonacci number ✅
-- ✅Count how many times a digit (e.g., 7) appears in a number
-- Return the sum of digits of a number
+- ✅ Count how many times a digit (e.g., 7) appears in a number
+- Return the sum of digits of a number (e.g. 1001 => 1+0+0+1 => 2)
 
 🧠 Arrays & Strings
 
