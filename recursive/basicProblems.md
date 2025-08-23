@@ -12,12 +12,12 @@
 - ✅ Return the factorial of N ✅
 - ✅ Return the N-th Fibonacci number ✅
 - ✅ Count how many times a digit (e.g., 7) appears in a number
-- Return the sum of digits of a number (e.g. 1001 => 1+0+0+1 => 2)
+- ✅ Return the sum of digits of a number (e.g. 1001 => 1+0+0+1 => 2)
 
 🧠 Arrays & Strings
 
-- Print all elements of an array using recursion
-- Return the sum of all elements in an array
+- ✅ Print all elements of an array using recursion
+- ✅ Return the sum of all elements in an array
 - Check if a string is a palindrome using recursion
 - Count how many times a character appears in a string recursively
 - Find the maximum element in an array recursively

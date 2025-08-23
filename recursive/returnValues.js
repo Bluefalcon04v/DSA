@@ -15,12 +15,31 @@ function factorial(n) {
 
 // console.log(factorial(5));
 
-// -----------------------------------------------------------------------------------------------------------------------  Return the N-th Fibonacci number
+// ----------------------------------------------------------------------------------------------------------------------- Factorial
 
-// function nthFactorial(n) {
-//   let arr = [0, 1];
-//   if (n <= 1) return n;
-//   return nthFactorial(n - 1) + nthFactorial(n - 2);
-// }
+function printFactorial(n) {
+  if (n <= 1) return 1;
+  return n * printFactorial(n - 1);
+}
 
-// console.log(nthFactorial(4));
+// console.log(printFactorial(10));
+
+// ----------------------------------------------------------------------------------------  Count how many times a digit (e.g., 7) appears in a number
+
+function sevenAppears(n) {
+  if (n < 1) return 0;
+  let lastDigit = n % 10;
+  let counter = lastDigit == 7 ? 1 : 0;
+  return counter + sevenAppears(Math.floor(n / 10));
+}
+
+// console.log(sevenAppears(177271));
+
+// -------------------------------------------------------------------------------------- The sum of digits of a number (e.g. 1001 => 1+0+0+1 => 2)
+function sumOfDigit(n) {
+  if (n < 10) return n;
+  let sum = n % 10;
+  return sum + sumOfDigit(Math.floor(n / 10));
+}
+
+// console.log(sumOfDigit(1011));
