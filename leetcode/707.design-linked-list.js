@@ -1,4 +1,5 @@
-// Design A Linked List
+//? Design A Linked List
+//?  707 Linked List Question
 
 /*----------  defining a NODE  ----------*/
 
@@ -13,6 +14,10 @@ function MylinkedList() {
   this.head = null;
   this.size = 0;
 }
+
+/*=============================================
+//>            Adding Method                            
+=============================================*/
 
 /*----------  Add a node at the head  ----------*/
 function AddAtHead(val) {
@@ -41,20 +46,54 @@ function AddAtTail(val) {
 /*----------  Add a node at the Index  ----------*/
 
 function AddAtIndex(index, val) {
-  let newNode = new Node(val);
-  if (this.head == null) {
+  if (index < 0 || index > this.size) return;
+  if (index === 0) {
     this.AddAtHead(val);
     return;
-  } else if (index == this.size) {
+  }
+  if (index == this.size) {
     this.AddAtTail(val);
     return;
-  } else {
-    let curr = this.head;
-    for (let i = 0; i < index - 1; i++) {
-      curr = curr.next;
-    }
-    newNode = curr.next;
-    curr.next = newNode;
   }
+  let newNode = new Node(val);
+  let curr = this.head;
+  for (let i = 0; i < index - 1; i++) {
+    curr = curr.next;
+  }
+  newNode.next = curr.next;
+  curr.next = newNode;
   this.size++;
+}
+
+/*=============================================
+//>            Getting Method                            
+=============================================*/
+
+/*----------  Get Value at the Index  ----------*/
+
+function Get(index) {
+  if (this.size <= index || index < 0) {
+    return -1;
+  }
+  let current = this.head;
+  for (let i = 0; i < index; i++) {
+    current = current.next;
+  }
+  return current.value;
+}
+
+/*----------  Delete Value at the Index  ----------*/
+
+function DeleteAtIndex(index) {
+  if (index < 0 || this.size <= index) return;
+  else if (index === 0) {
+    this.head = this.head.next;
+  } else {
+    let current = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
+    }
+    current.next = current.next.next;
+  }
+  this.size--;
 }
