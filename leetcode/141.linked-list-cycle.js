@@ -37,3 +37,14 @@ function hasCycle(head) {
 
 //> Approach 2 FLOYD's ALGORITHM
 
+function floydsAlgo(head) {
+  let slow = head;
+  let fast = head.next;
+
+  while (slow != fast) {
+    if (fast == null || fast.next == null) return false;
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return true;
+}
