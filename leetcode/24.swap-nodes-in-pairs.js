@@ -43,3 +43,15 @@ function swapPairs(head) {
   }
   return sentinel.next;
 }
+
+//? Recursive Approach
+function swapPairsRecursive(head) {
+  if (!head || !head.next) return head;
+  let l = head;
+  let r = head.next;
+
+  l.next = swapPairsRecursive(r.next);
+  r.next = l;
+
+  return r;
+}
