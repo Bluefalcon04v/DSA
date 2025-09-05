@@ -21,17 +21,25 @@ Input: head = [1,2,3]
 Output: [2,1,3]
 */
 
+// ? Iterative Approach
+
 function swapPairs(head) {
   if (!head || !head.next) return head;
+  let sentinel = new ListNode();
+  sentinel.next = head;
 
+  let prev = sentinel;
   let curr = head;
-  while (curr && curr.next) {
-    let temp = curr.next;
-    curr.next = temp.next;
-    temp.next = curr;
+  let next = head.next;
 
-    curr = curr.next;
-    temp = curr.next;
+  while (curr && curr.next) {
+    prev.next = next;
+    curr.next = next.next;
+    next.next = curr;
+
+    prev = curr;
+    curr = prev.next;
+    next = curr.next;
   }
-  return head;
+  return sentinel.next;
 }
