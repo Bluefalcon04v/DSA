@@ -12,3 +12,26 @@ Input: head = [5], left = 1, right = 1
 Output: [5]
 
 */
+
+function reverseBetween(head, left, right) {
+  let leftPointer = head;
+
+  for (let i = 1; i < left; i++) {
+    leftPointer = leftPointer.next;
+  }
+
+  let rightPointer = head;
+  for (let i = 1; i < right; i++) {
+    rightPointer = rightPointer.next;
+  }
+
+  let sentinel = new ListNode();
+  sentinel.next = leftPointer;
+
+  let prev = sentinel;
+  let curr = leftPointer;
+
+  while (leftPointer !== rightPointer) {
+    
+  }
+}
