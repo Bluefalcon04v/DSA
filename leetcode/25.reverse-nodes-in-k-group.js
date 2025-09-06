@@ -16,19 +16,13 @@ Output: [3,2,1,4,5]
 */
 
 function reverseKGroup(head, k) {
-  let l = head;
-  let r = head;
-
+  let l = (r = head);
   for (let i = 1; i < k; i++) {
-    r = r.next;
+    r = r?.next;
   }
 
-  let n = reverse(r.next, k);
-
-//   r.next = l;
-  l.next = n;
-
-  return r;
+  l.next = reverse(r.next, k);
+  r.next = l;
 }
 
 function reverse(head, k) {
@@ -43,17 +37,16 @@ function reverse(head, k) {
 
   if (len < k) return head;
 
-  let sentinel = new ListNode();
-  sentinel.next = head;
-  let curr = head;
-  let next = curr.next;
-  let prev = sentinel;
+  let sentinel = new ListNode(0, head);
 
-  while (curr) {
+  let prev = sentinel;
+  let curr = head;
+
+  for (let i = 0; i < k; i++) {
+    let temp = curr.next;
     curr.next = prev;
     prev = curr;
-    curr = next;
-    next = curr.next;
+    curr = temp;
   }
 
   return sentinel.next;
