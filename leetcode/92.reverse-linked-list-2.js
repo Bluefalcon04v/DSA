@@ -14,24 +14,54 @@ Output: [5]
 */
 
 function reverseBetween(head, left, right) {
-  let leftPointer = head;
+  if (!head || left === right) return head;
+
+  const sentinel = new ListNode(0, head);
+
+  let leftPrev = sentinel;
 
   for (let i = 1; i < left; i++) {
-    leftPointer = leftPointer.next;
+    leftPrev = leftPrev.next;
   }
 
-  let rightPointer = head;
-  for (let i = 1; i < right; i++) {
+  let leftPointer = leftPrev.next;
+  let rightPointer = sentinel;
+
+  for (let i = 1; i <= right; i++) {
     rightPointer = rightPointer.next;
   }
 
-  let sentinel = new ListNode();
-  sentinel.next = leftPointer;
-
-  let prev = sentinel;
-  let curr = leftPointer;
-
-  while (leftPointer !== rightPointer) {
-    
+  let curr = leftPointer.next;
+  let prev = leftPointer;
+  while (curr !== rightPointer) {
+    let temp = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = temp;
+    temp = temp.next;
   }
+  leftPointer.next = rightPointer.next;
+  rightPointer.next = prev;
+  leftPrev.next = rightPointer;
+
+  return sentinel.next;
+}
+
+function reverseBetween(head, left, right) {
+  if (!head || left === right) return head;
+
+  const dummy = new ListNode(0, head);
+  let prev = dummy;
+
+  for (let i = 1; i < left; i++) prev = prev.next;
+
+  let curr = prev.next;
+  for (let i = 0; i < right - left; i++) {
+    let temp = curr.next;
+    curr.next = temp.next;
+    temp.next = prev.next;
+    prev.next = temp;
+  }
+
+  return dummy.next;
 }
