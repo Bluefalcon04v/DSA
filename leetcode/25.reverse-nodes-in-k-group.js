@@ -16,17 +16,23 @@ Output: [3,2,1,4,5]
 */
 
 function reverseKGroup(head, k) {
-  let l = (r = head);
+  if (!head || k === 1) return head;
+
+  let sentinel = new ListNode(0, head);
+  let l = sentinel;
+  let r = head;
+
   for (let i = 1; i < k; i++) {
     r = r?.next;
   }
-
   l.next = reverse(r.next, k);
-  r.next = l;
+  r.next = reverse(sentinel.next, k);
+
+  return r;
 }
 
 function reverse(head, k) {
-  if (!head || !head.next) return head;
+  if (!head) return head;
 
   let len = 0;
   let lenPointer = head;
