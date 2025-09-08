@@ -45,5 +45,5 @@ function haveZero(n) {
   return false;
 }
 
-console.log(getNoZeroIntegers(1010));
+// console.log(getNoZeroIntegers(1010));  
 
