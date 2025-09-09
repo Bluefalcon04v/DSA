@@ -18,7 +18,24 @@ Output: [1,2,3,4]
 */
 
 function modifiedList(nums, head) {
+  let dummy = new ListNode(0, head);
+  let set = new Set();
+
   for (let i = 0; i < nums.length; i++) {
-    
+    set.add(nums[i]);
   }
+
+  let prev = dummy;
+  let curr = head;
+
+  while (curr) {
+    if (set.has(curr.val)) {
+      prev.next = curr.next;
+      curr = curr.next;
+    } else {
+      curr = curr.next;
+      prev = prev.next;
+    }
+  }
+  return dummy.next;
 }
