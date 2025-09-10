@@ -21,14 +21,14 @@ Explanation: The last word is "joyboy" with length 6.
 
 */
 
-// Approach 1
+// Approach 1 ------------------------------ (Build in function) T = O(n) , S = O(n)
 function lengthOfLastWord(s) {
   s = s.trim();
   s = s.split(" ");
   return s[s.length - 1].length;
 }
 
-// Approach 2
+// Approach 2 ------------------------------ (Two loops) T = O(n) , S = O(1)
 function lengthOfLastWord2(s) {
   let n = s.length - 1;
   while (n >= 0 && s[n] === " ") {
@@ -44,3 +44,16 @@ function lengthOfLastWord2(s) {
 }
 
 // lengthOfLastWord2("   fly me   to   the moon  ");
+
+// Approach 3 ------------------------------ (Single loop)
+function lengthOfLastWord3(s) {
+  let n = s.length - 1;
+  let counter = 0;
+  while (n >= 0) {
+    if (s[n] !== " ") {
+      counter++;
+    } else if (counter > 0) break;
+    n--;
+  }
+  return counter;
+}
