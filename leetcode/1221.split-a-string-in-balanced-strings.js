@@ -24,6 +24,7 @@ Explanation: s can be split into "LLLLRRRR".
  
 */
 
+// with 2 variables
 function balancedStringSplit(s) {
   let count = 0;
   let noOfR = (noOfL = 0);
@@ -43,3 +44,24 @@ function balancedStringSplit(s) {
 }
 
 // console.log(balancedStringSplit("RLRRLLRLRL"));
+
+// with 1 variables
+function balancedStringSplit2(s) {
+  let count = 0;
+  let temp = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "R") {
+      temp++;
+    } else {
+      temp--;
+    }
+    if (temp === 0) {
+      count++;
+      noOfL = noOfR = 0;
+    }
+  }
+  return count;
+}
+
+// console.log(balancedStringSplit2("RLRRLLRLRL"));
