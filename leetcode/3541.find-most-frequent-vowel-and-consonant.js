@@ -28,6 +28,7 @@ The output is 3 + 0 = 3.
 
 */
 
+// T = O(n), S = O(1)
 function maxFreqSum(s) {
   let map = {};
   for (let i = 0; i < s.length; i++) {
@@ -56,4 +57,27 @@ function maxFreqSum(s) {
   return maxConsonants + maxVowel;
 }
 
-console.log(maxFreqSum("aeiaeia"));
+// Better way of code T = O(n), S = O(1)
+function maxFreqSum1(s) {
+  let map = {};
+  for (let i = 0; i < s.length; i++) {
+    map[s[i]] = !map[s[i]] ? 1 : ++map[s[i]];
+  }
+
+  let vowel = ["a", "e", "i", "o", "u"];
+  let maxVowel = 0;
+  let maxConsonants = 0;
+  let mapKeys = Object.keys(map);
+
+  for (let i = 0; i < mapKeys.length; i++) {
+    if (vowel.includes(mapKeys[i])) {
+      maxVowel = Math.max(maxVowel, map[mapKeys[i]]);
+    } else {
+      maxConsonants = Math.max(maxConsonants, map[mapKeys[i]]);
+    }
+  }
+
+  return maxConsonants + maxVowel;
+}
+
+// console.log(maxFreqSum1("aeiaeia"));
