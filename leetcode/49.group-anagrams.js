@@ -20,7 +20,7 @@ Input: strs = ["a"]
 Output: [["a"]]
 
 */
-
+// Approach 1 (Sorting ) T= O(n * mlogm), S= O(nm)
 function isAnagrams(str) {
   let map = {};
   for (let i = 0; i < str.length; i++) {
@@ -34,4 +34,30 @@ function isAnagrams(str) {
   return [...Object.values(map)];
 }
 
-// console.log(isAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+function isAnagrams2(str) {
+  let map = {};
+  for (let i = 0; i < str.length; i++) {
+    let freqArr = Array(26).fill(0);
+    let s = str[i];
+
+    for (let j = 0; j < s.length; j++) {
+      let index = s[j].charCodeAt() - "a".charCodeAt();
+      freqArr[index]++;
+    }
+
+    let key = "";
+    for (let k = 0; k < 26; k++) {
+      key = key + String.fromCharCode(k) + freqArr[k];
+    }
+
+    if (!map[key]) {
+      map[key] = [s];
+    } else {
+      map[key].push(s);
+    }
+  }
+
+  return [...Object.values(map)];
+}
+
+// console.log(isAnagrams2(["eat", "tea", "tan", "ate", "nat", "bat"]));
