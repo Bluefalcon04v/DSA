@@ -38,18 +38,33 @@ We return true because 0 + 0 == 0.
 */
 
 function isSumEqual(firstWord, secondWord, targetWord) {
-  let words = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+  let letter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
 
-  let map = {};
-
-  for (let i = 0; i < words.length; i++) {
-    map[words[i]] = i;
-  }
-
-  let num = [];
+  firstWord = firstWord.split("");
+  let num1 = "";
   for (let i = 0; i < firstWord.length; i++) {
-    num.push(map[firstWord[i]]);
+    if (letter.includes(firstWord[i])) {
+      num1 = num1 + letter.indexOf(firstWord[i]);
+    }
   }
 
-//   console.log(num);
+  secondWord = secondWord.split("");
+  let num2 = "";
+  for (let i = 0; i < secondWord.length; i++) {
+    if (letter.includes(secondWord[i])) {
+      num2 = num2 + letter.indexOf(secondWord[i]);
+    }
+  }
+
+  targetWord = targetWord.split("");
+  let target = "";
+  for (let i = 0; i < targetWord.length; i++) {
+    if (letter.includes(targetWord[i])) {
+      target = target + letter.indexOf(targetWord[i]);
+    }
+  }
+
+  return Number(num1) + Number(num2) == Number(target);
 }
+
+// console.log(isSumEqual("acb", "cba", "cdb"));
