@@ -49,5 +49,25 @@ function removeOuterParentheses(s) {
   return res;
 }
 
+// Without using stack
+function removeOuterParentheses2(s) {
+  let count = 0;
+  let res = "";
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      if (count >= 1) {
+        res += s[i];
+      }
+      count++;
+    } else {
+      if (count > 1) {
+        res += s[i];
+      }
+      count--;
+    }
+  }
+  return res;
+}
+
 // console.log(removeOuterParentheses("(()())(())"));
 // console.log(removeOuterParentheses("(()())(())(()(()))"));

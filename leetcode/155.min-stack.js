@@ -49,7 +49,7 @@ function pop() {
   this.stack.pop();
 }
 
-function top() {
+function topA() {
   return this.stack[this.stack.length - 1][0];
 }
 
