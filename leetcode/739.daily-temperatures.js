@@ -17,67 +17,58 @@ Output: [1,1,0]
 
 */
 
-// function dailyTemperatures(temp) {
-//   let stack = [];
-//   let map = {};
-//   let lastElem = temp.length - 1;
-
-//   stack.push(temp[lastElem]);
-//   map[temp[lastElem]] = 0;
-
-//   for (let i = lastElem - 1; i >= 0; i--) {
-//     let top = stack.length - 1;
-//     if (temp[i] < stack[top]) {
-//       map[temp[i]] = 1;
-//       stack.push(temp[i]);
-//     } else {
-//       while (temp[i] > stack[stack.length - 1]) {
-//         stack.pop();
-//       }
-//       if (stack.length < 1) {
-//         map[temp[i]] = 0;
-//         stack.push(temp[i]);
-//       } else {
-//         map[temp[i]] = i;
-//         stack.push(temp[i]);
-//       }
-//     }
-//   }
-
-//   let res = [];
-//   for (let i = 0; i < temp.length; i++) {
-//     res.push([map[temp[i]], temp[i]]);
-//     res.push(map[temp[i]]);
-//   }
-//   console.log(map);
-//   return res;
-// }
-
 function dailyTemperatures(temp) {
   let stack = [];
-  let lastElem = temp.length - 1;
+  let res = [];
 
-  stack.push([temp[lastElem], 0]);
+  stack.push(temp.length - 1);
+  res[temp.length - 1] = 0;
 
-  console.log(stack)
-  for (let i = lastElem - 1; i >= 0; i--) {
-    let top = stack.length - 1;
-    if (stack[top][0] > temp[i]) {
-      stack.push([temp[i], i]);
+  for (let i = temp.length - 2; i >= 0; i--) {
+    if (temp[stack[stack.length - 1]] > temp[i]) {
+      stack.push(i);
+      res[i] = 1;
     } else {
-      let top = stack.length - 1;
-    //   while (stack[top][0] < temp[i]) {
-    //     stack.pop();
-    //   }
-      if (stack.length < 1) {
-        stack.push([temp[i], 0]);
+      while (temp[stack[stack.length - 1]] <= temp[i]) {
+        stack.pop();
+      }
+
+      if (stack.length === 0) {
+        res[i] = 0;
+        stack.push(i);
       } else {
-        stack.push([temp[i], 0]);
+        let lastStackVal = stack[stack.length - 1];
+        res[i] = lastStackVal - i;
+        stack.push(i);
       }
     }
   }
-  return stack;
+
+  return res;
 }
 
-console.log(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]));
-// console.log(dailyTemperatures([30, 60, 90]));
+// > Same Logic Better code
+
+function dailyTemperatures2(arr) {
+  let stack = [];
+  let n = arr.length;
+  let ans = Array(n).fill(0);
+  stack.push(n - 1);
+
+  for (let i = n - 2; i >= 0; i--) {
+    while (stack.length) {
+      let top = stack[stack.length - 1];
+      if (arr[i] >= arr[top]) {
+        stack.pop();
+      } else {
+        ans[i] = top - i;
+        break;
+      }
+    }
+    stack.push(i);
+  }
+  return ans;
+}
+
+// console.log(dailyTemperatures2([73, 74, 75, 71, 69, 72, 76, 73]));
+// console.log(dailyTemperatures2([89, 62, 70, 58, 47, 47, 46, 76, 100, 70]));
