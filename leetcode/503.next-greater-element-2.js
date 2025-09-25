@@ -48,27 +48,28 @@ function nextGreatestElement(nums) {
   return res.splice(0, nums.length);
 }
 
-// function nextGreatestElement(nums) {
-//   let res = [];
-//   let stack = [];
-//   let arr = [...nums, ...nums];
-//   stack.push(arr[arr.length - 1]);
-//   res = Array(n).fill(-1);
+// > better code same logic
+function nextGreatestElement2(nums) {
+  let stack = [];
+  let arr = [...nums, ...nums];
+  let res = Array(arr.length).fill(-1);
 
-//   for (let i = arr.length - 2; i >= 0; i--) {
-//     while (stack.length) {
-//       let top = stack[stack.length - 1];
-//       if (top >= arr[i]) {
-//         res[i] = top;
-//         break;
-//       } else {
-//         stack.pop();
-//       }
-//     }
-//     stack.push(arr[i]);
-//   }
-//   return res.splice(0, nums.length);
-// }
+  stack.push(arr[arr.length - 1]);
 
-// console.log(nextGreatestElement([1, 2, 1]));
-console.log(nextGreatestElement([1, 2, 3, 4, 3]));
+  for (let i = arr.length - 2; i >= 0; i--) {
+    while (stack.length) {
+      let top = stack[stack.length - 1];
+      if (top > arr[i]) {
+        res[i] = top;
+        break;
+      } else {
+        stack.pop();
+      }
+    }
+    stack.push(arr[i]);
+  }
+  return res.splice(0, nums.length);
+}
+
+// console.log(nextGreatestElement2([1, 2, 1]));
+// console.log(nextGreatestElement2([1, 2, 3, 4, 3])); //          [2,3,4,-1,4]
