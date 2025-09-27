@@ -29,4 +29,4 @@ function judgeSquareSum(c) {
   return false;
 }
 
-console.log(judgeSquareSum(999999999999));
+// console.log(judgeSquareSum(999999999999));
