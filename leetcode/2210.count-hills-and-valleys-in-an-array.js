@@ -31,6 +31,7 @@ There are 0 hills and valleys so we return 0.
  
 */
 
+// Approach 1 it is taking extra space
 function countHillValley(nums) {
   let newArr = [];
 
@@ -52,5 +53,30 @@ function countHillValley(nums) {
   return count;
 }
 
-// console.log(countHillValley([2, 4, 1, 1, 6, 5]));
-// console.log(countHillValley([6, 6, 5, 5, 4, 1]));
+// Approach 2 without accepting extra space
+function countHillValley2(nums) {
+  let count = 0;
+  for (let curr = 1; curr < nums.length - 1; curr++) {
+    let prev = curr - 1;
+    while (nums[curr] == nums[prev]) {
+      curr++;
+    }
+    let next = curr + 1;
+    while (nums[curr] == nums[next]) {
+      next++;
+    }
+    if (nums[curr] < nums[prev] && nums[next] < nums[prev]) {
+      count++;
+      curr++;
+    }
+    if (nums[curr] > nums[prev] && nums[next] > nums[prev]) {
+      count++;
+      curr++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countHillValley2([2, 4, 1, 1, 6, 5]));
+console.log(countHillValley2([6, 6, 5, 5, 4, 1]));
