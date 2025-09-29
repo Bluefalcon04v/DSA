@@ -21,6 +21,19 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 */
 
-function findPeakElement(nums) {}
+function findPeakElement(nums) {
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    let m = l + Math.floor((r - l) / 2);
+    if (nums[m] < nums[m + 1]) {
+      l = m + 1;
+    } else {
+      r = m - 1;
+    }
+  }
+  return l;
+}
 
-console.log(findPeakElement([1, 2, 1, 1, 3, 2]));
+// console.log(findPeakElement([1, 2, 1, 1, 3, 2]));
+// console.log(findPeakElement([1, 2, 1, 3, 5, 6, 4]));
