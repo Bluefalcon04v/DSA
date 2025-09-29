@@ -21,8 +21,6 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 */
 
-function findPeakElement(nums) {
-    
-}
+function findPeakElement(nums) {}
 
 console.log(findPeakElement([1, 2, 1, 1, 3, 2]));
