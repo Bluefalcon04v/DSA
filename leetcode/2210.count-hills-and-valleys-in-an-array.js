@@ -58,25 +58,23 @@ function countHillValley2(nums) {
   let count = 0;
   for (let curr = 1; curr < nums.length - 1; curr++) {
     let prev = curr - 1;
-    while (nums[curr] == nums[prev]) {
+    while (nums[curr] == nums[prev] && curr < nums.length - 1) {
       curr++;
     }
     let next = curr + 1;
     while (nums[curr] == nums[next]) {
       next++;
     }
-    if (nums[curr] < nums[prev] && nums[next] < nums[prev]) {
+    if (nums[curr] < nums[prev] && nums[curr] < nums[next]) {
       count++;
-      curr++;
     }
-    if (nums[curr] > nums[prev] && nums[next] > nums[prev]) {
+    if (nums[curr] > nums[prev] && nums[curr] > nums[next]) {
       count++;
-      curr++;
     }
   }
 
   return count;
 }
 
-console.log(countHillValley2([2, 4, 1, 1, 6, 5]));
-console.log(countHillValley2([6, 6, 5, 5, 4, 1]));
+// console.log(countHillValley2([2, 4, 1, 1, 6, 5]));
+// console.log(countHillValley2([57,57,57,57,57,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,85,85,85,86,86,86]));
