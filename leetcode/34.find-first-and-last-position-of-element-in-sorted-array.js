@@ -25,7 +25,32 @@ Output: [-1,-1]
 */
 
 function searchRange(nums, target) {
-    
+  if (nums.length < 1) return [-1, -1];
+  let l = 0;
+  let r = nums.length - 1;
+
+  while (l <= r) {
+    let m = l + Math.floor((r - l) / 2);
+    if (nums[m] === target) {
+      let i = m;
+      let j = m;
+      while (nums[i] == target) {
+        i--;
+      }
+      while (nums[j] == target) {
+        j++;
+      }
+      return [i + 1, j - 1];
+    }
+    if (nums[m] > target) {
+      r = m - 1;
+    } else {
+      l = m + 1;
+    }
+  }
+  return [-1, -1];
 }
 
-console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
+// console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
+// console.log(searchRange([5, 7, 7, 8, 8, 10], 6));
+// console.log(searchRange([], 1));

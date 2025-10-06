@@ -18,6 +18,32 @@ Output: 0
 
 */
 
-function findMin(nums) {}
+function findMin(nums) {
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    if (nums[l] <= nums[r]) {
+      return nums[l];
+    }
+    let m = l + Math.floor((r - l) / 2);
+    let i = 1;
+    while (nums[m] === nums[m - i]) {
+      i--;
+    }
+    if (i < 0) {
+      l = m + 1;
+    }
+    if (nums[m] < nums[i]) {
+      return nums[m];
+    }
+    if (nums[l] < nums[m]) {
+      l = m + 1;
+    } else {
+      r = m - 1;
+    }
+  }
+}
 
+console.log(findMin([3, 1, 3]));
+console.log(findMin([2, 2, 2, 2, 2]));
 console.log(findMin([2, 2, 2, 0, 1]));
