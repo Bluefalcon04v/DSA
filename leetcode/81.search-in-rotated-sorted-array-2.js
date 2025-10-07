@@ -20,13 +20,35 @@ function search(nums, target) {
   let r = nums.length - 1;
   while (l <= r) {
     let m = l + Math.floor((r - l) / 2);
-
     if (nums[m] === target) return true;
 
-    // if(nums[m] > target){
-        
-    // }
-  }
-}
+    // Skip duplicates
+    if (nums[l] === nums[m] && nums[m] === nums[r]) {
+      l++;
+      r--;
+    }
 
-console.log(search([2, 5, 6, 0, 0, 1, 2], 0));
+    //left side is sorted
+    else if (nums[l] <= nums[m]) {
+      if (target < nums[m] && target >= nums[l]) {
+        r = m - 1;
+      } else {
+        l = m + 1;
+      }
+    }
+    //right side is sorted
+    else {
+      if (target > nums[m] && target <= nums[r]) {
+        l = m + 1;
+      } else {
+        r = m - 1;
+      }
+    }
+  }
+  return false;
+}
+// console.log(search([2, 5, 6, 0, 0, 1, 2], 1));
+// console.log(search([1, 0, 1, 1, 1], 0));
+// console.log(
+//   search([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1], 2)
+// );
