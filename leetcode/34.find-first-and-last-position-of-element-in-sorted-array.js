@@ -64,7 +64,22 @@ function searchRange2(nums, target) {
       r = m;
     }
   }
-  nums[l] ===target && ans[0] == l
+  if (nums[l] === target) {
+    ans[0] = l;
+  }
+  l = 0;
+  r = nums.length - 1;
+  while (l < r) {
+    let m = l + Math.ceil((r - l) / 2);
+    if (nums[m] > target ) {
+      r = m - 1;
+    } else {
+      l = m;
+    }
+  }
+  if (nums[r] === target) ans[1] = l;
+
+  return ans;
 }
 
 console.log(searchRange2([5, 7, 7, 8, 8, 10], 8));
