@@ -24,6 +24,7 @@ Output: [-1,-1]
 
 */
 
+// T = O(n)
 function searchRange(nums, target) {
   if (nums.length < 1) return [-1, -1];
   let l = 0;
@@ -51,6 +52,21 @@ function searchRange(nums, target) {
   return [-1, -1];
 }
 
-// console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
-// console.log(searchRange([5, 7, 7, 8, 8, 10], 6));
-// console.log(searchRange([], 1));
+function searchRange2(nums, target) {
+  let l = 0;
+  let r = nums.length - 1;
+  let ans = [-1, -1];
+  while (l < r) {
+    let m = l + Math.floor((r - l) / 2);
+    if (nums[m] < target) {
+      l = m + 1;
+    } else {
+      r = m;
+    }
+  }
+  nums[l] ===target && ans[0] == l
+}
+
+console.log(searchRange2([5, 7, 7, 8, 8, 10], 8));
+console.log(searchRange2([5, 7, 7, 8, 8, 10], 6));
+console.log(searchRange2([], 1));
