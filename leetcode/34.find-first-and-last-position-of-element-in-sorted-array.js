@@ -52,6 +52,7 @@ function searchRange(nums, target) {
   return [-1, -1];
 }
 
+// T = O(log n)
 function searchRange2(nums, target) {
   let l = 0;
   let r = nums.length - 1;
@@ -71,7 +72,7 @@ function searchRange2(nums, target) {
   r = nums.length - 1;
   while (l < r) {
     let m = l + Math.ceil((r - l) / 2);
-    if (nums[m] > target ) {
+    if (nums[m] > target) {
       r = m - 1;
     } else {
       l = m;
@@ -82,6 +83,38 @@ function searchRange2(nums, target) {
   return ans;
 }
 
-console.log(searchRange2([5, 7, 7, 8, 8, 10], 8));
-console.log(searchRange2([5, 7, 7, 8, 8, 10], 6));
-console.log(searchRange2([], 1));
+// T = O(log n)
+function searchRange3(nums, target) {
+  let l = 0;
+  let r = nums.length - 1;
+  let ans = [-1, -1];
+  while (l <= r) {
+    let m = l + Math.ceil((r - l) / 2);
+    if (nums[m] > target) {
+      r = m - 1;
+    } else if (nums[m] === target) {
+      ans[0] = m;
+      r = m - 1;
+    } else {
+      l = m + 1;
+    }
+  }
+  l = 0;
+  r = nums.length - 1;
+  while (l <= r) {
+    let m = l + Math.ceil((r - l) / 2);
+    if (nums[m] > target) {
+      r = m - 1;
+    } else if (nums[m] === target) {
+      ans[1] = m;
+      l = m + 1;
+    } else {
+      l = m + 1;
+    }
+  }
+  return ans;
+}
+
+// console.log(searchRange3([5, 7, 7, 8, 8, 10], 8));
+// console.log(searchRange3([5, 7, 7, 8, 8, 10], 6));
+// console.log(searchRange3([], 1));
