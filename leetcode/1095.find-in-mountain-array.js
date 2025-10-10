@@ -28,9 +28,64 @@ Explanation: 3 does not exist in the array, so we return -1.
 
 */
 
-function findInMountainArray(target, mountainArr) {
-    
+function findInMountainArray(target, nums) {
+  // find the peak
+  const findPeak = () => {
+    let l = 0;
+    let r = nums.length - 1;
+    while (l < r) {
+      let m = l + Math.floor((r - l) / 2);
+      let elem = nums[m];
+      if (elem < nums[m + 1]) {
+        l = m + 1;
+      } else {
+        r = m;
+      }
+    }
+    return l;
+  };
+
+  //
+  const binarySearchAcc = (l, r) => {
+    while (l <= r) {
+      let m = l + Math.floor((r - l) / 2);
+      let elem = nums[m];
+      if (elem === target) {
+        return m;
+      }
+      if (elem < target) {
+        l = m + 1;
+      } else {
+        r = m - 1;
+      }
+    }
+    return -1;
+  };
+
+  const binarySearchDec = (l, r) => {
+    while (l <= r) {
+      let m = l + Math.floor((r - l) / 2);
+      let elem = nums[m];
+      if (elem === target) {
+        return m;
+      }
+      if (elem > target) {
+        l = m + 1;
+      } else {
+        r = m - 1;
+      }
+    }
+    return -1;
+  };
+
+  let peak = findPeak();
+  let leftRes = binarySearchAcc(0, peak);
+
+  if (leftRes !== -1) return leftRes;
+
+  return binarySearchDec(peak + 1, nums.length - 1);
 }
 
-console.log(findInMountainArray(3, [1, 2, 3, 4, 5, 3, 1]));
-console.log(findInMountainArray(3, [0, 1, 2, 4, 2, 1]));
+// console.log(findInMountainArray(3, [1, 2, 3, 4, 5, 3, 1]));
+// console.log(findInMountainArray(3, [0, 1, 2, 4, 2, 1]));
+// console.log(findInMountainArray(1, [0, 5, 3, 1]));
