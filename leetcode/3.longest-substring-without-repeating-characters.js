@@ -25,7 +25,7 @@ function longestSubstring(s) {
   let maxWords = 0;
   let map = {};
   while (j < s.length) {
-    if (map[s[j]] !=  undefined && map[s[j]] >= i) {
+    if (map[s[j]] != undefined && map[s[j]] >= i) {
       i = map[s[j]] + 1;
     }
     map[s[j]] = j;
@@ -33,7 +33,7 @@ function longestSubstring(s) {
     maxWords = Math.max(maxWords, w);
     j++;
   }
-  
+
   return maxWords;
 }
 // console.log(longestSubstring("bbbbb"));

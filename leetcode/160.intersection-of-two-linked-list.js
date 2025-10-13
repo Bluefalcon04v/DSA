@@ -15,6 +15,7 @@ Output: Intersected at '2'
 Explanation: The intersected node's value is 2 (note that this must not be 0 if the two lists intersect).
 */
 
+// T = O(m+n), S= O(m)
 function getIntersectionNode(headA, headB) {
   let setB = new Set();
   let currB = headB;
@@ -30,4 +31,43 @@ function getIntersectionNode(headA, headB) {
   }
 
   return null;
+}
+
+// Optimized approach T = O(m+n), S= O(1)
+// Two Pointers
+function getIntersectionNode2(headA, headB) {
+  let listALen = 0;
+  let listBLen = 0;
+
+  let currA = headA;
+  while (currA) {
+    listALen++;
+    currA = currA.next;
+  }
+
+  let currB = headB;
+  while (currB) {
+    listBLen++;
+    currB = currB.next;
+  }
+  let diff = Math.abs(listBLen - listALen);
+  if (listALen > listBLen) {
+    let temp = headA;
+
+    headA = headB;
+    headB = temp;
+  }
+
+  for (let i = 0; i < diff; i++) {
+    headB = headB.next;
+  }
+  currA = headA;
+  currB = headB;
+
+  while (currA != currB) {
+    currA = currA.next;
+    currB = currB.next;
+  }
+
+  return currA;
 }
