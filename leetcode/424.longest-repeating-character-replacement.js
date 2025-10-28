@@ -28,7 +28,7 @@ function characterReplacement(s, k) {
       maxWindow = Math.max(maxWindow, j - i + 1);
       j++;
       map[s[j]] = !map[s[j]] ? 1 : ++map[s[j]];
-    } else {  
+    } else {
       --map[s[i]];
       i++;
     }
@@ -49,4 +49,4 @@ var isWindowValid = function (map, k) {
   return totalCount - maxCount <= k;
 };
 
-console.log(characterReplacement("AABABBA", 1));
+// console.log(characterReplacement("AABABBA", 1));
