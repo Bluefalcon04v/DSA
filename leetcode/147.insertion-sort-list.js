@@ -20,20 +20,28 @@ Output: [-1,0,3,4,5]
 */
 
 var insertionSort = function (head) {
-  let sentinel = new ListNode();
-  //   sentinel.next = head;
-
-  let curr = head;
-  let next = curr.next;
-  curr.next = sentinel;
-  curr = next;
-  next = next.next;
-
+  let dummy = new ListNode(-Infinity, head);
   let prev = head;
+  let curr = head.next;
 
   while (curr) {
-    
+    if (curr.val < prev.val) {
+      let temp = dummy;
+      while (temp?.next?.val < curr.val) {
+        temp = temp?.next;
+      }
+      prev.next = curr.next;
+      curr.next = temp.next;
+      temp.next = curr;
+
+      curr = prev.next;
+    } else {
+      prev = curr;
+      curr = curr.next;
+    }
   }
+
+  return dummy.next;
 };
 
-console.log(insertionSort([4, -2, 7, 3, 1]));
+// console.log(insertionSort([4, -2, 7, 3, 1]));

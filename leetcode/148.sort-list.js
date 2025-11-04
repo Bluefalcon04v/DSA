@@ -19,8 +19,9 @@ Output: []
 
 function sortList(head) {
   let newList = new ListNode();
-  let newHead = newList;
 
-  while (head) {}
+  while (head) {
+
+  }
 }
  

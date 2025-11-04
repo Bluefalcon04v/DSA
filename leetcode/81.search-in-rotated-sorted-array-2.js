@@ -27,7 +27,8 @@ function search(nums, target) {
       l++;
       r--;
     }
-
+    
+    // Check which side is sorted and contains the target
     //left side is sorted
     else if (nums[l] <= nums[m]) {
       if (target < nums[m] && target >= nums[l]) {
