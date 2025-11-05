@@ -20,8 +20,8 @@ Output: []
 function sortList(head) {
   let newList = new ListNode();
 
-  while (head) {
+  // while (head) {
 
-  }
+  // }
 }
  
