@@ -18,10 +18,40 @@ Output: []
 */
 
 function sortList(head) {
-  let newList = new ListNode();
+  if (!head || !head.next) return head;
+  let slow = head;
+  let fast = head;
+  let next = null;
+  while (fast && fast.next) {
+    next = slow;
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  next.next = null; // node -> null so that we can split it
 
-  // while (head) {
+  let left = sortList(head);
+  let right = sortList(slow);
 
-  // }
+  return merge(left, right);
 }
- 
+
+var merge = function (left, right) {
+  let dummy = new ListNode(0);
+  let temp = dummy;
+
+  while (left && right) {
+    if (left.val <= right.val) {
+      temp.next = left;
+      left = left.next;
+    } else {
+      temp.next = right;
+      right = right.next;
+    }
+
+    temp = temp.next;
+  }
+
+  temp.next = left || right;
+
+  return dummy.next;
+};
