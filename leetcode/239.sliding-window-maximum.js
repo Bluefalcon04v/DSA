@@ -1,6 +1,4 @@
-/*
-239. Sliding Window Maximum
-
+/* 239. Sliding Window Maximum
 You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
 Return the max sliding window.
 
@@ -22,41 +20,24 @@ Input: nums = [1], k = 1
 Output: [1]
 */
 
-// var maxSlidingWindow = function (nums, k) {
-//   let i = 0;
-//   let j = k - 1;
-//   let tempMax = -Infinity;
-//   let ans = [];
-//   let z = i;
-//   while (j < nums.length) {
-//     while (z < i + k) {
-//       tempMax = Math.max(tempMax, nums[z]);
-//       z++;
-//     }
-
-//     ans.push(tempMax);
-//     tempMax = -Infinity;
-//     i++;
-//     j++;
-//   }
-//   return ans;
-// };
-
+// Time Complexity = O(n), Space Complexity = O(k)
 var maxSlidingWindow = function (nums, k) {
-  let i = 0;
-  let j = k - 1;
-  let tempMax = -Infinity;
+  let i = (j = 0);
   let ans = [];
+  let queue = [];
   while (j < nums.length) {
-    while (i < j) {
-      tempMax = Math.max(tempMax, nums[i]);
+    // removing the element from the queue if last elem of queue is smaller than nums[j]
+    while (queue.length && queue[queue.length - 1] < nums[j]) queue.pop();
+    queue.push(nums[j]);
+    if (j >= k - 1) {
+      ans.push(queue[0]);
+      // removing the element from the queue because it do not exists in the window size
+      if (queue[0] === nums[i]) queue.shift();
       i++;
     }
-    ans.push(tempMax);
     j++;
   }
   return ans;
 };
-
-console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3));
-console.log(maxSlidingWindow([1, -1], 1));
+// console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3));
+// console.log(maxSlidingWindow([1, -1], 1));
