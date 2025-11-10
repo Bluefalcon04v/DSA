@@ -26,4 +26,4 @@ var inOrderTraversal = function (root) {
   return ans;
 };
 
-console.log(inOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9]));
+// console.log(inOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])); // [4,2,6,5,7,1,3,9,8]
