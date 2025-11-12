@@ -26,4 +26,22 @@ var inOrderTraversal = function (root) {
   return ans;
 };
 
+var inOrderTraversalIterative = function (root) {
+  // left -> root -> right
+  let curr = root;
+  let stack = [];
+  let ans = [];
+  while (curr || stack.length) {
+    while (curr) {
+      stack.push(curr);
+      curr = curr?.left;
+    }
+
+    curr = stack.pop();
+    ans.push(curr.val);
+    curr = curr?.right;
+  }
+
+  return ans;
+};
 // console.log(inOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])); // [4,2,6,5,7,1,3,9,8]
