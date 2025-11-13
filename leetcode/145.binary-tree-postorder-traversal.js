@@ -12,6 +12,7 @@ Output: [4,6,7,5,2,9,8,3,1]
 
 */
 
+// -------------------- Recursive Approach --------------------
 var postOrderTraversal = function (root) {
   // left node -> right node -> root node
   let ans = [];
@@ -23,6 +24,21 @@ var postOrderTraversal = function (root) {
   }
   traversal(root);
   return ans;
+};
+
+// -------------------- Iterative Approach 2 Stacks --------------------
+var postOrderTraversal = function (root) {
+  if (!root) return [];
+  let s1 = [root];
+  let s2 = [];
+
+  while (s1.length) {
+    let curr = s1.pop();
+    curr?.left && s1.push(curr?.left);
+    curr?.right && s1.push(curr?.right);
+    s2.push(curr?.val);
+  }
+  return s2.reverse();
 };
 
 // console.log(postOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])); // [4,6,7,5,2,9,8,3,1]
