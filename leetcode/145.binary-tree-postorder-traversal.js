@@ -41,4 +41,4 @@ var postOrderTraversal = function (root) {
   return s2.reverse();
 };
 
-// console.log(postOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])); // [4,6,7,5,2,9,8,3,1]
+// console.log(postOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])); // [ 4, 6, 7, 5, 2, 9, 8, 3, 1 ]
