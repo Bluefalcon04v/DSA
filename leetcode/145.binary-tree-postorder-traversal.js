@@ -41,4 +41,30 @@ var postOrderTraversal = function (root) {
   return s2.reverse();
 };
 
+// -------------------- Iterative Approach 1 Stacks --------------------
+var postOrderTraversal = function (root) {
+  let curr = root;
+  let stack = [];
+  let ans = [];
+  let lastVisited;
+
+  while (curr || stack.length) {
+    while (curr) {
+      stack.push(curr);
+      curr = curr?.left;
+    }
+
+    let topStack = stack[stack.length - 1];
+
+    if (topStack?.right && topStack.right != lastVisited) {
+      curr = topStack?.right;
+    } else {
+      ans.push(topStack?.val);
+      lastVisited = stack.pop();
+    }
+  }
+
+  return ans;
+};
+
 // console.log(postOrderTraversal([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])); // [ 4, 6, 7, 5, 2, 9, 8, 3, 1 ]
