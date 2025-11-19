@@ -38,4 +38,18 @@ var levelOrderTraversal = function (root) {
   return ans;
 };
 
+// ------------------------- recursive approach -------------------------
+var levelOrderTraversal = function (root) {
+  if (!root) return [];
+  let ans = [];
+  var traverse = function (node, level) {
+    if (!ans[level]) ans[level] = [];
+    ans[level].push(node.val);
+    node.left && traverse(node.left, level + 1);
+    node.right && traverse(node.right, level + 1);
+  };
+  traverse(root, 0);
+  return ans;
+};
+
 // console.log(levelOrderTraversal([3, 9, 20, null, null, 15, 7]));
