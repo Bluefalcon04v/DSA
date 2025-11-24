@@ -12,6 +12,7 @@ Output: false
 
 */
 
+// -------------------------- Recursive approach
 var isSymmetric = function (root) {
   function traversal(left, right) {
     // If both nodes are null, this part of the tree is symmetric
@@ -32,4 +33,33 @@ var isSymmetric = function (root) {
 
   // Start comparing the left and right subtrees of the root
   return traversal(root.left, root.right);
+};
+
+// -------------------------- Iterative approach
+var isSymmetric = function (root) {
+  // Initialize queue with the left and right children of the root
+  let queue = [root?.left, root?.right];
+
+  while (queue.length) {
+    // Take two nodes at a time to compare
+    let p1 = queue.shift();
+    let p2 = queue.shift();
+
+    // If both nodes are null, this pair is symmetric — move on
+    if (!p1 && !p2) continue;
+
+    // If only one is null, symmetry breaks
+    if (!p1 || !p2) return false;
+
+    // If their values don't match, tree is not symmetric
+    if (p1.val !== p2.val) return false;
+
+    // Add corresponding child pairs to the queue:
+    // left of one with right of the other, and right of one with left of the other
+    queue.push(p1.left, p2.right);
+    queue.push(p1.right, p2.left);
+  }
+
+  // If all checks pass, the tree is symmetric
+  return true;
 };
