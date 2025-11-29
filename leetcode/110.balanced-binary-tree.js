@@ -32,5 +32,5 @@ var balancedTree = function (root) {
   return ans;
 };
 
-console.log(balancedTree([3, 9, 20, null, null, 15, 7])); // true
-console.log(balancedTree([1, 2, 2, 3, 3, null, null, 4, 4])); // false
+// console.log(balancedTree([3, 9, 20, null, null, 15, 7])); // true
+// console.log(balancedTree([1, 2, 2, 3, 3, null, null, 4, 4])); // false
