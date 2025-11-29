@@ -28,5 +28,6 @@ var diameterOfBinaryTree = function (root) {
   traversal(root);
   return maxDiameter;
 };
-console.log(diameterOfBinaryTree([1, 2, 3, 4, 5])); // 3
-console.log(diameterOfBinaryTree([1, 2])); // 1
+
+// console.log(diameterOfBinaryTree([1, 2, 3, 4, 5])); // 3
+// console.log(diameterOfBinaryTree([1, 2])); // 1
