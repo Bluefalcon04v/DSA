@@ -43,4 +43,4 @@ let lowestAncestor = (root, p, q) => {
   return lca;
 };
 
-console.log(lowestAncestor([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], 5, 4));
+// console.log(lowestAncestor([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], 5, 4));
