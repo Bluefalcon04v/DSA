@@ -1,6 +1,6 @@
 class MinHeap {
   constructor() {
-    this.heap = [5, 10, 20, 30];
+    this.heap = [];
   }
 
   getLeftIndex(i) {
@@ -81,11 +81,14 @@ class MinHeap {
 
 let heap = new MinHeap();
 
-heap.insert(23);
+heap.insert(5);
 heap.insert(2);
 heap.insert(3);
 heap.insert(1);
 
-// console.log(heap.extract());
+console.log(heap); // [1,2,3,5]
+console.log(heap.extract()); // 1
 
-// console.log(heap);
+console.log(heap.peek()); // 2
+
+console.log(heap); // [2,3,5]
