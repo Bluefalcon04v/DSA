@@ -3,10 +3,10 @@
 
 /*----------  defining a NODE  ----------*/
 
-function Node(val) {
-  this.val = val;
-  this.next = null;
-}
+// function Node(val) {
+//   this.val = val;
+//   this.next = null;
+// }
 
 /*----------  defining a Linked List  ----------*/
 

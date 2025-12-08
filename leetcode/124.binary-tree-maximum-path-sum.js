@@ -38,4 +38,4 @@ function maximumPath(root) {
   return res;
 }
 
-console.log(maximumPath([-10, 9, 20, null, null, 15, 7])); // 42
+// console.log(maximumPath([-10, 9, 20, null, null, 15, 7])); // 42

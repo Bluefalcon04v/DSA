@@ -86,9 +86,9 @@ heap.insert(2);
 heap.insert(3);
 heap.insert(1);
 
-console.log(heap); // [1,2,3,5]
-console.log(heap.extract()); // 1
+// console.log(heap); // [1,2,3,5]
+// console.log(heap.extract()); // 1
 
-console.log(heap.peek()); // 2
+// console.log(heap.peek()); // 2
 
-console.log(heap); // [2,3,5]
+// console.log(heap); // [2,3,5]
