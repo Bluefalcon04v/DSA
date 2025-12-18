@@ -35,6 +35,7 @@ function combinationSum(k, target) {
   let result = [];
 
   function tracking(remaining, path, start) {
+    if (path.length > k) return;
     if (remaining === 0 && path.length == k) {
       result.push([...path]);
       return;

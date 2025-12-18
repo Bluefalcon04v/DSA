@@ -17,6 +17,38 @@ Input: digits = "2"
 Output: ["a","b","c"]
 */
 
+// ------------------------------ Backtracking
+function cartesianProduct(nums) {
+  let letters = {
+    2: "abc",
+    3: "def",
+    4: "ghi",
+    5: "jkl",
+    6: "mno",
+    7: "pqrs",
+    8: "tuv",
+    9: "wxyz",
+  };
+
+  let result = [];
+  function backtracking(path, start) {
+    if (start === nums.length) {
+      result.push(path.join(""));
+      return;
+    }
+    let choices = letters[nums[start]];
+
+    for (let i = 0; i < choices.length; i++) {
+      path.push(choices[i]);
+      backtracking(path, start + 1);
+
+      path.pop();
+    }
+  }
+  backtracking([], 0);
+  return result;
+}
+
 function cartesianProduct(num) {
   if (num === "") return [];
   const mobileKeys = {
