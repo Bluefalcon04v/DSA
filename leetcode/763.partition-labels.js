@@ -17,6 +17,7 @@ Input: s = "eccbbbbdec"
 Output: [10]
 
 */
+
 function partitionLabels(s) {
   let map = {};
   for (let i = 0; i < s.length; i++) {
@@ -50,4 +51,4 @@ function partitionLabels(s) {
 
   return result;
 }
-console.log(partitionLabels("ababcbacadefegdehijhklij"));
+// console.log(partitionLabels("ababcbacadefegdehijhklij")); //  [9,7,8]
