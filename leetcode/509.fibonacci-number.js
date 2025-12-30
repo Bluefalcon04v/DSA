@@ -29,4 +29,23 @@ function fib(n) {
   return fib(n - 1) + fib(n - 2);
 }
 
+// using top down approach
+let store = {};
+function fib(n) {
+  if (n <= 1) return n;
+  if (!store[n]) {
+    store[n] = fib(n - 1) + fib(n - 2);
+  }
+  return store[n];
+}
+
+// using bottom up approach
+function fib(n) {
+  let store = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    store[i] = store[i - 1] + store[i - 2];
+  }
+  return store(n);
+}
+
 // console.log(fib(4));
