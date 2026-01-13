@@ -48,3 +48,34 @@ var validPath = function (n, edges, source, destination) {
   }
   return false;
 };
+
+
+var validPath = function (n, edges, source, destination) {
+  let map = {};
+  for (let [x, y] of edges) {
+    if (!map[x]) {
+      map[x] = [];
+    }
+    if (!map[y]) {
+      map[y] = [];
+    }
+    map[x].push(y);
+    map[y].push(x);
+  }
+
+  let visited = new Set();
+  let dfs = (curr) => {
+    if (curr === destination) return true;
+    visited.add(curr);
+    for (let n of map[curr]) {
+      if (!visited.has(n)) {
+        if (dfs(n)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  };
+
+  return dfs(source);
+};
