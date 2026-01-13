@@ -18,9 +18,9 @@ Explanation: There is no path from vertex 0 to vertex 5.
 
 */
 
+// BFS
 var validPath = function (n, edges, source, destination) {
   let map = {};
-  // creating a map using an array ie(edges) so that we call apply the graphs on it
   for (let [x, y] of edges) {
     if (!map[x]) {
       map[x] = [];
@@ -49,7 +49,7 @@ var validPath = function (n, edges, source, destination) {
   return false;
 };
 
-
+// DFS
 var validPath = function (n, edges, source, destination) {
   let map = {};
   for (let [x, y] of edges) {
