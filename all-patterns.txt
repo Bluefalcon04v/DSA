@@ -1,0 +1,373 @@
+Below is a **complete, structured list of DSA patterns** used across **FAANG / product-based company interviews**, competitive programming, and real-world problem solving.
+
+This is not a random list.
+These are the **core patterns interviewers actually test**, repeatedly.
+
+---
+
+# ✅ COMPLETE DSA PATTERNS (MASTER LIST)
+
+---
+
+## 1️⃣ Array Patterns
+
+### A. Basic Array Traversal
+
+* Single pass traversal
+* Reverse traversal
+* Prefix sum
+* Suffix sum
+* Difference array
+* Range update queries
+
+### B. Two Pointers
+
+* Left–right pointer
+* Fast–slow pointer
+* Partitioning
+* Remove duplicates
+* Pair sum / triplet sum
+* Container with most water
+
+### C. Sliding Window
+
+* Fixed window
+* Variable window
+* Count/frequency window
+* Max/min in window
+* Longest/shortest subarray
+
+### D. Subarray Problems
+
+* Kadane’s Algorithm
+* Max/min sum subarray
+* Subarray sum = K
+* Count subarrays
+* Circular subarray
+
+---
+
+## 2️⃣ Hashing Patterns
+
+* Frequency map
+* First unique / duplicate
+* HashSet lookup
+* Prefix sum + hashmap
+* Two sum / N sum
+* Grouping problems
+* Anagram checks
+
+---
+
+## 3️⃣ String Patterns
+
+### A. String Traversal
+
+* Character frequency
+* ASCII manipulation
+* Word-based parsing
+
+### B. Two Pointers (Strings)
+
+* Palindrome checks
+* Reverse words
+* Valid parentheses
+* Remove characters
+
+### C. Sliding Window (Strings)
+
+* Longest substring without repeat
+* Longest repeating character replacement
+* Minimum window substring
+* Permutation in string
+
+---
+
+## 4️⃣ Stack Patterns
+
+* Valid parentheses
+* Monotonic stack
+* Next greater / smaller element
+* Histogram problems
+* Expression evaluation
+* Stack simulation
+
+---
+
+## 5️⃣ Queue / Deque Patterns
+
+* Sliding window max/min
+* BFS simulation
+* Level order traversal
+* Task scheduling
+* Circular queue
+
+---
+
+## 6️⃣ Linked List Patterns
+
+### A. Pointer Manipulation
+
+* Reverse list
+* Reverse in groups
+* Merge lists
+* Remove Nth node
+
+### B. Fast & Slow Pointer
+
+* Cycle detection
+* Find middle
+* Intersection point
+
+### C. In-place Modification
+
+* Reorder list
+* Palindrome linked list
+* Deep copy with random pointer
+
+---
+
+## 7️⃣ Binary Search Patterns
+
+### A. Classic Binary Search
+
+* Search in sorted array
+* Lower/upper bound
+
+### B. Modified Binary Search
+
+* Rotated array
+* Nearly sorted array
+* Peak element
+* Infinite array
+* First/last occurrence
+
+### C. Binary Search on Answer
+
+* Min/max optimization
+* Capacity problems
+* Koko eating bananas
+* Allocate books
+* Aggressive cows
+
+---
+
+## 8️⃣ Recursion Patterns
+
+* Basic recursion
+* Parameterized recursion
+* Functional recursion
+* Subset generation
+* Combination sum
+* Palindrome recursion
+
+---
+
+## 9️⃣ Backtracking Patterns
+
+* Subsets
+* Permutations
+* Combinations
+* N-Queens
+* Sudoku solver
+* Word search
+* Maze paths
+
+---
+
+## 🔟 Tree Patterns
+
+### A. Tree Traversals
+
+* Preorder
+* Inorder
+* Postorder
+* Level order
+* Zigzag traversal
+
+### B. DFS Patterns
+
+* Height / depth
+* Diameter
+* Balanced tree
+* Path sum
+* Lowest common ancestor
+
+### C. BFS Patterns
+
+* Level-based logic
+* Width of tree
+* Vertical traversal
+* Right/left view
+
+---
+
+## 1️⃣1️⃣ Binary Search Tree (BST) Patterns
+
+* Search / insert / delete
+* Validate BST
+* Kth smallest/largest
+* LCA in BST
+* Floor / ceil
+* Inorder based logic
+
+---
+
+## 1️⃣2️⃣ Heap / Priority Queue Patterns
+
+* Top K elements
+* Kth smallest/largest
+* Merge K sorted lists
+* Median in data stream
+* Frequency-based heap
+
+---
+
+## 1️⃣3️⃣ Greedy Patterns
+
+* Activity selection
+* Interval scheduling
+* Jump game
+* Gas station
+* Job sequencing
+* Candy distribution
+
+---
+
+## 1️⃣4️⃣ Interval Patterns
+
+* Merge intervals
+* Insert interval
+* Meeting rooms
+* Overlapping intervals
+* Sweep line algorithm
+
+---
+
+## 1️⃣5️⃣ Graph Patterns
+
+### A. Traversals
+
+* BFS
+* DFS
+
+### B. Cycle Detection
+
+* Directed graph
+* Undirected graph
+
+### C. Topological Sort
+
+* Kahn’s algorithm
+* DFS-based topo
+
+### D. Shortest Path
+
+* Dijkstra
+* Bellman-Ford
+* Floyd-Warshall
+* BFS (unweighted)
+
+### E. Disjoint Set (Union Find)
+
+* Union by rank
+* Path compression
+* Connected components
+* Kruskal’s algorithm
+
+---
+
+## 1️⃣6️⃣ Dynamic Programming (DP) Patterns
+
+### A. 1D DP
+
+* Fibonacci
+* Climbing stairs
+* House robber
+* Min cost climbing stairs
+
+### B. 2D DP
+
+* Grid paths
+* Unique paths
+* LCS
+* Edit distance
+* DP on matrix
+
+### C. Knapsack Patterns
+
+* 0/1 Knapsack
+* Unbounded knapsack
+* Subset sum
+* Partition equal subset
+
+### D. DP on Subsequences
+
+* LIS
+* LCS variations
+* Palindromic subsequence
+
+### E. DP on Strings
+
+* Regex matching
+* Wildcard matching
+
+### F. DP on Trees
+
+* Robber on tree
+* Path-based DP
+
+---
+
+## 1️⃣7️⃣ Bit Manipulation Patterns
+
+* XOR tricks
+* Single number
+* Bit masking
+* Count set bits
+* Power of two
+* Subsets using bits
+
+---
+
+## 1️⃣8️⃣ Math Patterns
+
+* GCD / LCM
+* Prime sieve
+* Modular arithmetic
+* Fast exponentiation
+* Combinatorics
+
+---
+
+## 1️⃣9️⃣ Advanced Patterns (High Value)
+
+* Mo’s Algorithm
+* Trie
+* Segment Tree
+* Fenwick Tree (BIT)
+* KMP / Z-Algorithm
+* Rabin-Karp
+* Rolling hash
+
+---
+
+# 🎯 How You Should Study This (IMPORTANT)
+
+### Phase 1 (Foundation)
+
+Arrays → Strings → Hashing → Two Pointers → Sliding Window
+
+### Phase 2 (Intermediate)
+
+Stacks → Queues → Linked Lists → Binary Search → Recursion
+
+### Phase 3 (Advanced)
+
+Trees → BST → Heaps → Greedy → Intervals
+
+### Phase 4 (Expert)
+
+Graphs → DP → Tries → Segment Trees
+
+---

@@ -1,0 +1,57 @@
+🧩 CORE DSA PATTERNS
+
+| DSA Pattern                    | Adobe   | Walmart   | Figma | IBM |
+| ------------------------------ | -----   | ------- |   ----- | --- |
+| Arrays (Traversal, Prefix Sum) | ⭐⭐⭐   | ⭐⭐⭐     | ⭐⭐    | ⭐⭐⭐ |
+| Two Pointers                   | ⭐⭐⭐   | ⭐⭐⭐     | ⭐⭐⭐   | ⭐⭐  |
+| Sliding Window                 | ⭐⭐⭐   | ⭐⭐⭐     | ⭐⭐⭐   | ⭐⭐  |
+| Hashing / Maps                 | ⭐⭐⭐   | ⭐⭐⭐     | ⭐⭐⭐   | ⭐⭐⭐ |
+| Subarray Problems              | ⭐⭐⭐   | ⭐⭐      | ⭐⭐    | ⭐⭐  |
+
+
+
+🧵 STRING & STACK PATTERNS
+| Pattern                   | Adobe   | Walmart    | Figma | IBM |
+| ------------------------- | -----    | -------   | ----- | --- |
+| String Manipulation       | ⭐⭐⭐   | ⭐⭐      | ⭐⭐⭐   | ⭐⭐  |
+| Anagrams / Frequency      | ⭐⭐⭐   | ⭐⭐⭐     | ⭐⭐    | ⭐⭐  |
+| Stack (Valid Parentheses) | ⭐⭐    | ⭐⭐⭐     | ⭐⭐    | ⭐⭐⭐ |
+| Monotonic Stack           | ⭐⭐    | ⭐⭐⭐     | ⭐⭐    | ⭐⭐  |
+
+
+
+🔗 LINKED LIST & QUEUE
+| Pattern            | Adobe | Walmart | Figma | IBM |
+| ------------------ | ----- | ------- | ----- | --- |
+| Linked List Basics | ⭐⭐    | ⭐⭐      | ⭐     | ⭐⭐⭐ |
+| Fast–Slow Pointer  | ⭐⭐    | ⭐⭐      | ⭐     | ⭐⭐⭐ |
+| Queue / Deque      | ⭐⭐    | ⭐⭐⭐     | ⭐⭐    | ⭐⭐  |
+
+
+
+🌳 TREE & BST PATTERNS
+| Pattern                   | Adobe | Walmart | Figma | IBM |
+| ------------------------- | ----- | ------- | ----- | --- |
+| Tree Traversals (DFS/BFS) | ⭐⭐⭐   | ⭐⭐      | ⭐⭐⭐   | ⭐⭐⭐ |
+| LCA / Diameter / Height   | ⭐⭐⭐   | ⭐       | ⭐⭐    | ⭐⭐  |
+| BST Operations            | ⭐⭐    | ⭐       | ⭐⭐    | ⭐⭐  |
+
+
+
+🔍 BINARY SEARCH & GREEDY
+| Pattern                 | Adobe | Walmart | Figma | IBM |
+| ----------------------- | ----- | ------- | ----- | --- |
+| Classic Binary Search   | ⭐⭐    | ⭐⭐⭐     | ⭐⭐⭐   | ⭐⭐⭐ |
+| Binary Search on Answer | ⭐⭐⭐   | ⭐⭐      | ⭐⭐⭐   | ⭐   |
+| Greedy Algorithms       | ⭐⭐    | ⭐⭐⭐     | ⭐⭐    | ⭐⭐  |
+| Interval Problems       | ⭐⭐    | ⭐⭐⭐     | ⭐⭐    | ⭐   |
+
+
+🧠 DP & GRAPH PATTERNS
+| Pattern            | Adobe | Walmart | Figma | IBM |
+| ------------------ | ----- | ------- | ----- | --- |
+| DP (1D / Grid)     | ⭐⭐⭐   | ⭐       | ⭐⭐    | ⭐⭐  |
+| DP on Subsequences | ⭐⭐⭐   | —       | ⭐     | ⭐   |
+| Graph BFS / DFS    | ⭐⭐    | ⭐       | ⭐⭐⭐   | ⭐⭐⭐ |
+| Topological Sort   | ⭐     | —       | ⭐⭐⭐   | ⭐   |
+| Advanced Graphs    | —     | —       | ⭐     | —   |
