@@ -1,3 +1,5 @@
+https://docs.google.com/spreadsheets/d/1Bu0-iXGG7NWRgI1sGZeoZEAadEcN89d8urXYTljopEo/edit?gid=1425406513#gid=1425406513
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 COMPANY-WEIGHTED DSA PATTERN → SUB-PATTERN → LEETCODE QUESTIONS
 Target Companies: Adobe, Walmart, Figma, IBM
