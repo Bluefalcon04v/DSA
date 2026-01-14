@@ -1,0 +1,485 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+COMPANY-WEIGHTED DSA PATTERN → SUB-PATTERN → LEETCODE QUESTIONS
+Target Companies: Adobe, Walmart, Figma, IBM
+
+Legend:
+[A] = Adobe (High Priority)
+[W] = Walmart (High Priority)
+[F] = Figma (High Priority)
+[I] = IBM (High Priority)
+[ALL] = Important for all companies
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+✅
+1. ARRAY PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A) Basic Array Traversal
+
+Single Pass Traversal
+
+* Best Time to Buy and Sell Stock [A][W][F][I]
+* Majority Element [A][W][I]
+* Move Zeroes [W][I]
+* Find Pivot Index [I]
+
+Reverse Traversal
+
+* Trapping Rain Water [A][W]
+* Product of Array Except Self [A][F]
+* Daily Temperatures [W][F]
+
+Prefix Sum
+
+* Range Sum Query – Immutable [I]
+* Subarray Sum Equals K [A][W][F]
+* Continuous Subarray Sum [A]
+* Find Pivot Index [I]
+
+Suffix Sum
+
+* Product of Array Except Self [A][F]
+* Minimum Size Subarray Sum [W]
+
+Difference Array
+
+* Corporate Flight Bookings [A]
+* Range Addition [A]
+
+Range Update Queries
+
+* Range Addition [A]
+* Shifting Letters [F]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+B) Two Pointers
+
+Left–Right Pointer
+
+* Valid Palindrome [W][I]
+* Container With Most Water [A][W][F]
+* Reverse String [I]
+
+Fast–Slow Pointer
+
+* Linked List Cycle [I]
+* Happy Number [W][I]
+* Middle of the Linked List [I]
+
+Partitioning
+
+* Sort Colors [W][F]
+* Move Zeroes [W][I]
+
+Remove Duplicates
+
+* Remove Duplicates from Sorted Array [W][I]
+* Remove Element [I]
+
+Pair / Triplet Sum
+
+* Two Sum [ALL]
+* 3Sum [A][F]
+* 3Sum Closest [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+C) Sliding Window
+
+Fixed Window
+
+* Maximum Average Subarray I [W][I]
+* Sliding Window Maximum [A][W][F]
+
+Variable Window
+
+* Longest Substring Without Repeating Characters [A][F][W]
+* Minimum Size Subarray Sum [W]
+
+Count / Frequency Window
+
+* Permutation in String [A][F]
+* Find All Anagrams in a String [A][F]
+
+Max / Min in Window
+
+* Sliding Window Maximum [A][W][F]
+* Max Consecutive Ones III [W]
+
+Longest / Shortest Subarray
+
+* Longest Repeating Character Replacement [A][F]
+* Subarray Product Less Than K [W]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+D) Subarray Problems
+
+Kadane’s Algorithm
+
+* Maximum Subarray [A][W][I]
+* Maximum Product Subarray [A]
+
+Max / Min Sum Subarray
+
+* Maximum Subarray [A][W]
+* Min Cost Climbing Stairs [I]
+
+Subarray Sum = K
+
+* Subarray Sum Equals K [A][W][F]
+
+Count Subarrays
+
+* Subarrays with K Different Integers [A]
+* Number of Subarrays with Bounded Maximum [A]
+
+Circular Subarray
+
+* Maximum Sum Circular Subarray [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. HASHING PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Frequency Map
+
+* Group Anagrams [A][F][W]
+* Top K Frequent Elements [A][W]
+
+First Unique / Duplicate
+
+* First Unique Character in a String [I]
+* Contains Duplicate [I]
+
+HashSet Lookup
+
+* Happy Number [W][I]
+* Longest Consecutive Sequence [A][F]
+
+Prefix Sum + HashMap
+
+* Subarray Sum Equals K [A][W][F]
+* Continuous Subarray Sum [A]
+
+Two Sum / N Sum
+
+* Two Sum [ALL]
+* 4Sum [A]
+
+Grouping Problems
+
+* Group Anagrams [A][F][W]
+* Sort Characters by Frequency [A]
+
+Anagram Checks
+
+* Valid Anagram [W][I]
+* Find All Anagrams in a String [A][F]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. STRING PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A) String Traversal
+
+* Valid Anagram [W][I]
+* Longest Common Prefix [I]
+* Count and Say [I]
+
+B) Two Pointers (Strings)
+
+* Valid Palindrome [W][I]
+* Reverse Words in a String [W]
+* Remove Palindromic Subsequences [A]
+
+C) Sliding Window (Strings)
+
+* Longest Substring Without Repeating Characters [A][F]
+* Minimum Window Substring [A][F]
+* Longest Repeating Character Replacement [A][F]
+* Permutation in String [A][F]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. STACK PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Valid Parentheses
+
+* Valid Parentheses [W][I]
+* Minimum Remove to Make Valid Parentheses [A]
+
+Monotonic Stack
+
+* Daily Temperatures [W][F]
+* Next Greater Element II [A]
+
+Next Greater / Smaller
+
+* Next Greater Element I [W][I]
+* Online Stock Span [W][F]
+
+Histogram Problems
+
+* Largest Rectangle in Histogram [A][F]
+* Maximal Rectangle [A]
+
+Expression Evaluation
+
+* Evaluate Reverse Polish Notation [I]
+* Basic Calculator [A]
+
+Stack Simulation
+
+* Decode String [A][F]
+* Asteroid Collision [W]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. QUEUE / DEQUE PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Sliding Window Maximum [A][W][F]
+* Binary Tree Level Order Traversal [ALL]
+* Task Scheduler [A][W]
+* Design Circular Queue [I]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. LINKED LIST PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A) Pointer Manipulation
+
+* Reverse Linked List [ALL]
+* Reverse Nodes in k-Group [A]
+* Merge Two Sorted Lists [I]
+* Remove Nth Node From End [W][I]
+
+B) Fast & Slow Pointer
+
+* Linked List Cycle [I]
+* Find the Duplicate Number [A]
+
+C) In-place Modification
+
+* Reorder List [A]
+* Palindrome Linked List [W]
+* Copy List with Random Pointer [A][F]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. BINARY SEARCH PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A) Classic
+
+* Binary Search [ALL]
+* First Bad Version [I]
+
+B) Modified
+
+* Search in Rotated Sorted Array [A][F]
+* Find Minimum in Rotated Sorted Array [A]
+* Peak Element [F]
+
+C) Binary Search on Answer
+
+* Koko Eating Bananas [A][F]
+* Capacity To Ship Packages [A][W]
+* Split Array Largest Sum [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. RECURSION PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Subsets [A][F]
+* Combination Sum [A]
+* Palindrome Partitioning [A][F]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9. BACKTRACKING PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Permutations [A][F]
+* N-Queens [A]
+* Word Search [A][F]
+* Sudoku Solver [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. TREE PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Traversals
+
+* Inorder Traversal [ALL]
+* Level Order Traversal [ALL]
+* Zigzag Traversal [A]
+
+DFS
+
+* Diameter of Binary Tree [A][F]
+* Path Sum [A][W]
+* LCA of Binary Tree [A][F]
+
+BFS
+
+* Right Side View [W][F]
+* Vertical Order Traversal [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11. BST PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Validate BST [ALL]
+* Kth Smallest in BST [A][F]
+* LCA in BST [I]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12. HEAP / PRIORITY QUEUE PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Kth Largest Element [A][W][F]
+* Top K Frequent Elements [A][W]
+* Merge K Sorted Lists [A][F]
+* Median from Data Stream [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13. GREEDY PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Jump Game [W][I]
+* Gas Station [A]
+* Candy [A]
+* Non-overlapping Intervals [W]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14. INTERVAL PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Merge Intervals [ALL]
+* Meeting Rooms I & II [A][W][F]
+* Insert Interval [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15. GRAPH PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Traversals
+
+* Number of Islands [ALL]
+* Flood Fill [I]
+
+Cycle Detection
+
+* Course Schedule [A][F][W]
+
+Topological Sort
+
+* Course Schedule II [A][F]
+
+Shortest Path
+
+* Word Ladder [A][F]
+* Rotting Oranges [W]
+
+Union Find
+
+* Number of Connected Components [A]
+* Kruskal / Min Cost to Connect Points [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16. DYNAMIC PROGRAMMING
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1D DP
+
+* Climbing Stairs [ALL]
+* House Robber [A][W]
+
+2D DP
+
+* Unique Paths [I]
+* Longest Common Subsequence [A][F]
+* Edit Distance [A]
+
+Knapsack
+
+* Partition Equal Subset Sum [A][W]
+* Coin Change [A][W]
+
+Subsequences
+
+* LIS [A][F]
+* Longest Palindromic Subsequence [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17. BIT MANIPULATION
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Single Number [ALL]
+* Counting Bits [I]
+* Subsets using Bitmasking [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18. MATH PATTERNS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* GCD of Array [I]
+* Sieve of Eratosthenes [I]
+* Power(x, n) [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+19. ADVANCED PATTERNS (ADOBE / FIGMA ONLY)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Implement Trie [A][F]
+* KMP String Matching [A]
+* Segment Tree (Range Sum Query) [A]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## FINAL ADVICE
+
+If time is limited:
+
+* Adobe / Figma: Focus on DP, Trees, Sliding Window
+* Walmart: Arrays, Stack, Greedy
+* IBM: Broad coverage, Easy–Medium consistency
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
