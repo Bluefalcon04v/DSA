@@ -1,39 +1,160 @@
-🔁 Counting and Printing (Very Basic)
+1. LINEAR RECURSION
+   Pattern: f(n) → f(n-1)
+   Use: counting, sums, digit problems
 
-- ✅ Print numbers from 1 to N ✅
-- ✅ Print numbers from N to 1 ✅
-- ✅ Print all even numbers from 1 to N ✅
-- ✅ Print all odd numbers from N to 1 ✅
-- ✅ Print each digit of a number (e.g., 123 → 1, 2, 3) ✅
+   Build-up:
 
-🔄 Return Values (Sum, Product, etc.)
+   - Print 1 → N, N → 1
+   - Sum 1 → N
+   - Sum of digits
 
-- ✅ Return the sum of numbers from 1 to N ✅
-- ✅ Return the factorial of N ✅
-- ✅ Return the N-th Fibonacci number ✅
-- ✅ Count how many times a digit (e.g., 7) appears in a number
-- ✅ Return the sum of digits of a number (e.g. 1001 => 1+0+0+1 => 2)
+   LeetCode:
 
-🧠 Arrays & Strings
+   - 509 Fibonacci Number
+   - 231 Power of Two
+   - 342 Power of Four
 
-- ✅ Print all elements of an array using recursion
-- ✅ Return the sum of all elements in an array
-- Check if a string is a palindrome using recursion
-- Count how many times a character appears in a string recursively
-- Find the maximum element in an array recursively
+==================================================
 
-⚒️ Build and Return (Construct values or arrays)
+2. TAIL RECURSION (Accumulator)
+   Pattern: f(n, acc) → f(n-1, acc)
+   Use: optimized recursion, iteration-like
 
-- Build and return an array from 1 to N
-- Build and return an array from N to 1
-- Return a reversed version of an array recursively
-- Return a new string with characters in reverse order
-- Remove all occurrences of a specific character from a string
+   Build-up:
 
-🧩 Slightly Trickier (Logic Building)
+   - Factorial (accumulator)
+   - Array sum (index + acc)
 
-- Return true if a number is a power of 2
-- Return true if an array is sorted (in ascending order)
-- Generate all numbers from 1 to N where the sum of digits is less than K
-- Count number of subsets in an array whose sum equals a target
-- Generate all binary strings of length N
+   LeetCode:
+
+   - 206 Reverse Linked List
+   - 724 Find Pivot Index
+
+==================================================
+
+3. HEAD / POST-ORDER RECURSION
+   Pattern:
+   f(n-1) → work
+   or
+   work → f(n-1)
+
+   Use: forward / backward output
+
+   Build-up:
+
+   - Print array
+   - Reverse string / number
+
+   LeetCode:
+
+   - 344 Reverse String
+   - 151 Reverse Words in a String
+
+==================================================
+
+4. DIVIDE & CONQUER
+   Pattern: f(left) + f(right)
+   Use: split problem into halves
+
+   Build-up:
+
+   - Binary search logic
+   - Merge two halves
+
+   LeetCode:
+
+   - 704 Binary Search
+   - 912 Sort an Array
+   - 169 Majority Element
+
+==================================================
+
+5. MULTIPLE RECURSIVE CALLS (Tree Recursion)
+   Pattern: f(n-1) + f(n-2)
+   Use: counting ways
+
+   Build-up:
+
+   - Fibonacci
+   - Climbing stairs
+
+   LeetCode:
+
+   - 70 Climbing Stairs
+   - 1137 Tribonacci Number
+
+==================================================
+
+6. INCLUDE / EXCLUDE
+   Pattern:
+   include → recurse
+   exclude → recurse
+
+   Use: subset logic
+
+   Build-up:
+
+   - Generate subsets
+   - Subset sum
+
+   LeetCode:
+
+   - 78 Subsets
+   - 90 Subsets II
+   - 416 Partition Equal Subset Sum
+
+==================================================
+
+7. CHOOSE – EXPLORE – UNCHOOSE (Backtracking)
+   Pattern:
+   choose → recurse → unchoose
+
+   Use: permutations, combinations
+
+   LeetCode:
+
+   - 46 Permutations
+   - 47 Permutations II
+   - 77 Combinations
+
+==================================================
+
+8. BUILD & RETURN
+   Pattern:
+   result = recurse
+   modify result
+   return result
+
+   Use: constructing arrays / strings
+
+   LeetCode:
+
+   - 344 Reverse String
+   - 1047 Remove Adjacent Duplicates
+   - 1768 Merge Strings Alternately
+
+==================================================
+
+9. BOOLEAN DECISION RECURSION
+   Pattern:
+   if fail/success → return true/false
+   else → recurse
+
+   Use: validation checks
+
+   LeetCode:
+
+   - 125 Valid Palindrome
+   - 941 Valid Mountain Array
+   - 234 Palindrome Linked List
+
+==================================================
+
+10. ADVANCED (MIXED PATTERNS)
+
+LeetCode:
+
+- 22 Generate Parentheses
+- 39 / 40 Combination Sum
+- 131 Palindrome Partitioning
+- 51 N Queens
