@@ -27,7 +27,9 @@
         "RRLL",
         "RRRLLRLL",
         "subarrays",
-        "takeuforward"
+        "takeuforward",
+        "Tribonacci",
+        "UNCHOOSE"
     ],
     "codesnap.backgroundColor": "#abb8c3"
 }
