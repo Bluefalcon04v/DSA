@@ -1,0 +1,85 @@
+PATTERN 3 — BRANCHING RECURSION PRACTICE SET
+
+LEVEL 1: BASIC BRANCHING (WARM-UP)
+
+1. ✅ Fibonacci Number
+   Input: n
+   Output: nth Fibonacci number
+   Calls: n-1, n-2
+
+2. ✅ Climbing Stairs (1 or 2 steps)
+   Input: n
+   Output: number of ways
+   Same structure as Fibonacci
+
+3. Count Binary Strings of Length N
+   Input: n
+   Output: count only (do NOT print)
+
+4. Print Binary Strings of Length N
+   Input: n
+   Output: all strings of 0/1
+
+
+LEVEL 2: DECISION-BASED RECURSION
+
+5. ✅ Print All Strings of Length N Using {a, b}
+   Example for n=2: aa ab ba bb
+
+6. ✅ Print All Strings of Length N Using Digits {0,1,2}
+   Branches = 3 per call
+
+7. Generate All Dice Outcomes (1–6) of Length N
+   Example: rolling dice n times
+
+8. Print All Paths to Reach N Using 1 or 2 Steps
+   Print paths like: 1-1-2, 2-2, etc.
+
+
+LEVEL 3: SUBSEQUENCE / INCLUDE–EXCLUDE (VERY IMPORTANT)
+
+9. Print All Subsequences of a String
+   Input: "abc"
+   Output:
+   ""
+   a
+   b
+   c
+   ab
+   ac
+   bc
+   abc
+
+10. Count Subsequences of a String
+    Do NOT print
+
+11. Print All Subsequences With Sum = K
+    Input: array + target sum
+
+12. Subset Sum Count
+    Return number of subsets with sum = K
+
+
+LEVEL 4: GRID / PATH PROBLEMS
+
+13. Count Paths in a Grid (Right / Down)
+    From (0,0) to (m,n)
+
+14. Print All Paths in a Grid
+    Moves: R, D
+
+15. Count Paths With Obstacles
+    Some cells blocked
+
+
+LEVEL 5: INTERVIEW-LEVEL TREE THINKING
+
+16. Generate Parentheses (n pairs)
+
+17. Letter Combinations of Phone Number
+
+18. Maze Paths with 4 Directions
+
+19. Count Ways to Partition a Number
+
+20. Print All Ways to Make Change (Coins)
