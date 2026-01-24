@@ -29,10 +29,10 @@ LEVEL 2: DECISION-BASED RECURSION
 6. ✅ Print All Strings of Length N Using Digits {0,1,2}
    Branches = 3 per call
 
-7. Generate All Dice Outcomes (1–6) of Length N
+7. ✅ Generate All Dice Outcomes (1–6) of Length N
    Example: rolling dice n times
 
-8. Print All Paths to Reach N Using 1 or 2 Steps
+8. ✅ Print All Paths to Reach N Using 1 or 2 Steps
    Print paths like: 1-1-2, 2-2, etc.
 
 
