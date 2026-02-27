@@ -21,6 +21,26 @@ Input: nums = [1,2,3], k = 3
 Output: 2
 */
 
+// S = O(n), T = O(n)
+function subarraySumEqual(nums, k) {
+  let map = { 0: 1 };
+  let currSum = 0;
+  let count = 0;
+  for (let num of nums) {
+    currSum += num;
+    if (map[currSum - k]) {
+      count += map[currSum - k];
+    }
+    if (map[currSum - k]) {
+      map[currSum - k] += 1;
+    } else {
+      map[currSum - k] = 1;
+    }
+  }
+  return count;
+}
+
+// S = O(1), T = O(n^2)
 function subarraySumEqual(nums, k) {
   let totalOcc = 0;
   for (let i = 0; i < nums.length; i++) {
