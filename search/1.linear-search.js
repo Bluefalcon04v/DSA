@@ -27,5 +27,5 @@ function linearSearch2(array, target) {
   return -1;
 }
 
-// console.log(linearSearch([10, 4, 1, 20, 3], 20));
-// console.log(linearSearch2([10, 4, 1, 20, 3], 4));
+console.log(linearSearch([10, 4, 1, 20, 3], 20));
+console.log(linearSearch2([10, 4, 1, 20, 3], 4));
