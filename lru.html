@@ -3,17 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LRU</title>
+    <title>LRU Cache Visualizer</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-neutral-800 p-4 text-white">
-    <button
-      onclick="window.location = './'"
-      class="px-2 py-1 rounded-md ring-2 ring-white hover:ring-blue-400 hover:text-blue-400 text-xs"
-    >
-      Home
-    </button>
-    <div class="text-shadow py-4 text-3xl">LRU</div>
-    <script></script>
+
+  <body class="bg-neutral-900 text-white p-6">
+    <h1 class="text-3xl mb-4 font-bold">LRU Cache Visualizer</h1>
+
+    <!-- Controls -->
+    <div class="space-y-3 max-w-md">
+      <div class="flex gap-2">
+        <input
+          id="key"
+          placeholder="Key"
+          class="text-black px-2 py-1 rounded w-1/2"
+        />
+        <input
+          id="value"
+          placeholder="Value"
+          class="text-black px-2 py-1 rounded w-1/2"
+        />
+      </div>
+
+      <div class="flex gap-2">
+        <button onclick="handlePut()" class="bg-blue-500 px-3 py-1 rounded">
+          Put
+        </button>
+        <button onclick="handleGet()" class="bg-green-500 px-3 py-1 rounded">
+          Get
+        </button>
+      </div>
+
+      <div id="message" class="text-yellow-300 text-sm"></div>
+
+      <div class="mt-4">
+        <h2 class="text-lg">Cache (MRU → LRU)</h2>
+        <div id="cache" class="flex gap-3 mt-3"></div>
+      </div>
+    </div>
+
+    <script>
+      class Node {
+        constructor(key, val) {
+          this.key = key;
+          this.val = val;
+          this.next = null;
+          this.prev = null;
+        }
+      }
+
+      class LRU {
+        constructor(capacity) {
+          this.capacity = capacity;
+          this.map = new Map();
+
+          this.head = new Node(0, 0);
+          this.tail = new Node(0, 0);
+
+          this.head.next = this.tail;
+          this.tail.prev = this.head;
+        }
+
+        #remove(node) {
+          node.prev.next = node.next;
+          node.next.prev = node.prev;
+        }
+
+        #add(node) {
+          node.next = this.head.next;
+          node.prev = this.head;
+
+          this.head.next.prev = node;
+          this.head.next = node;
+        }
+
+        put(key, val) {
+          if (this.map.has(key)) {
+            this.#remove(this.map.get(key));
+          }
+
+          let newNode = new Node(key, val);
+          this.#add(newNode);
+          this.map.set(key, newNode);
+
+          let evicted = null;
+
+          if (this.map.size > this.capacity) {
+            let lru = this.tail.prev;
+            this.#remove(lru);
+            this.map.delete(lru.key);
+            evicted = lru.key;
+          }
+
+          return evicted;
+        }
+
+        get(key) {
+          if (!this.map.has(key)) return -1;
+
+          let node = this.map.get(key);
+          this.#remove(node);
+          this.#add(node);
+
+          return node.val;
+        }
+      }
+
+      // Create LRU instance
+      let lru = new LRU(3);
+
+      function handlePut() {
+        const key = document.getElementById("key").value;
+        const value = document.getElementById("value").value;
+
+        if (key === "" || value === "") return;
+
+        const evicted = lru.put(key, value);
+
+        document.getElementById("message").innerText =
+          evicted !== null
+            ? `Evicted key: ${evicted}`
+            : `Inserted/Updated key: ${key}`;
+
+        renderCache();
+      }
+
+      function handleGet() {
+        const key = document.getElementById("key").value;
+        if (key === "") return;
+
+        const result = lru.get(key);
+
+        document.getElementById("message").innerText =
+          result === -1 ? "Key not found ❌" : `Value: ${result} ✅`;
+
+        renderCache();
+      }
+
+      function renderCache() {
+        const container = document.getElementById("cache");
+        container.innerHTML = "";
+
+        let curr = lru.head.next;
+
+        while (curr !== lru.tail) {
+          const box = document.createElement("div");
+          box.className =
+            "px-4 py-2 bg-neutral-700 rounded border border-white shadow";
+
+          box.innerHTML = `
+            <div class="text-sm text-gray-300">Key</div>
+            <div class="text-lg font-bold">${curr.key}</div>
+            <div class="text-sm text-gray-300 mt-1">Val</div>
+            <div class="text-lg">${curr.val}</div>
+          `;
+
+          container.appendChild(box);
+          curr = curr.next;
+        }
+      }
+
+      renderCache();
+    </script>
   </body>
 </html>

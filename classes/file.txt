@@ -1,0 +1,62 @@
+🔹 Fundamentals
+    Variables & Data Types
+    Functions
+    Objects & Arrays
+    Scope & Closures
+
+
+🔹 Core OOP Foundations
+    Objects in JavaScript
+    this Keyword
+    Constructor Functions
+    new Keyword
+
+
+🔹 Prototype System
+    Prototypes
+    prototype vs __proto__
+    Prototype Chain
+    Inheritance via Prototypes
+
+
+🔹 ES6 Classes
+    class Syntax
+    Constructor Method
+    Instance Methods
+    Static Methods
+    Getters & Setters
+
+
+🔹 OOP Principles
+    Encapsulation
+    Abstraction
+    Inheritance
+    Polymorphism
+
+
+🔹 Advanced OOP
+    Private Fields (#)
+    Object Composition
+    Factory Functions
+    Mixins
+    Object.create()
+
+
+🔹 JavaScript-Specific Concepts
+    this Binding Rules
+    bind, call, apply
+    Closures in OOP
+
+
+🔹 Design Patterns
+    Constructor Pattern
+    Module Pattern
+    Factory Pattern
+    Singleton Pattern
+    Observer Pattern
+
+
+🔹 Practice Concepts
+    Class-based Design
+    Code Reusability
+    Modular Structure
