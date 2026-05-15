@@ -15,7 +15,7 @@ class Banking {
 }
 
 
-let customer1 = new Banking('Amit');
+let customer1 = new Banking('Amit'); 
 let customer2 = new Banking('Prateek', 3000);
 customer1.withDraw('112')
 console.log(customer1)
