@@ -1,30 +1,31 @@
-let userInfo = {
-    name: 'Amit Sah',
-    age: 26,
-    array: [1, 2, 3, 4, { name: 'hello', array: [1, 2, 3] }],
-    socialAccounts: {
-        linkedIn: 'abc@linkedin.com',
-        gmail: 'abc@gmail.com',
-        facebook: 'abc@facebook.com',
-        others: {
-            github: 'abc@github.com',
-            codeForces: {
-                gmail: 'abc@codeForces.com',
-                contributedQuestions: ['122A', '123s', {
-                    contest1: '111A',
-                    contest2: '222B'
-                }]
-            }
-        }
-    }
+const user = {
+    name: "Amit Sah",
 
-}
+    contact: {
+        email: "amit@gmail.com",
+        city: "Mumbai",
+    },
 
+    skills: ["JavaScript", "React", "Node.js"],
 
-let shallowCopy = { ...userInfo }; // this only copy the first of the object not the nested one 
+    projects: [
+        {
+            name: "E-Commerce App",
+            tech: ["React", "MongoDB"],
+        },
+    ],
 
-let deepCopyBrute = JSON.parse(JSON.stringify(userInfo)); // brute method ie first make the object as a string and then make a copy of it 
+    settings: {
+        darkMode: true,
+        notifications: {
+            email: true,
+            sms: false,
+        },
+    },
+};
 
+let shallowCopy = { ...userInfo };
+let deepCopyBrute = JSON.parse(JSON.stringify(userInfo)); // does the work **Not Preferred in Interviews**
 
 function deepCopy(data) {
     if (typeof (data) !== 'object' || data === null) {
